@@ -1,0 +1,130 @@
+include ../mixins/flash-messages
+
+doctype html
+html
+
+    //- HTML HEADER
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+        script(src="//use.typekit.net/fsz7let.js")
+        script.
+          try{Typekit.load();}catch(e){}
+
+        link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+        title= title || 'uplift'
+
+        link(href="/css/bootstrap.css", rel="stylesheet")
+        link(href="//cloud.typography.com/7134132/722046/css/fonts.css", rel="stylesheet", type="text/css")
+        link(href="/css/font-awesome.min.css", rel="stylesheet")
+        link(href="/css/main.css", rel="stylesheet")
+        style.
+          ul.navbar-right li:hover ul {display: block;}
+
+        //- This file provides the default styling for the KeystoneJS Content Editor
+        if user && user.canAccessKeystone
+            link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
+
+        //- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+        //- Safely remove this block if you are not targeting IE8
+        //-[if lt IE 9]
+            script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
+            script(src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js")
+        //-[endif]
+
+        //- Include template-specific stylesheets by extending the css block
+        block css
+
+        //- Add any other template-specific HEAD tags by extending the head block
+        block head
+
+    //- HTML BODY
+    body
+        .navbar.navbar-inverse.navbar-static-top
+          .container
+            .navbar-header
+              a.navbar-brand(href='/') uplift
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav.navbar-right
+                li
+                  a(href='/challenge') Challenges
+                li
+                  a(href='/pricing') Pricing
+                li
+                  a(href='/pricing', data-toggle='dropdown')
+                    | Resources
+                    b.caret
+                  ul.dropdown-menu(role='menu')
+                    li
+                      a(href='/blog') Blog
+                    li
+                      a(href='/customers') Case Studies
+                  // ul
+                //li
+                li
+                  a(href='/pricing', data-toggle='dropdown')
+                    | More
+                    b.caret
+                  ul.dropdown-menu(role='menu')
+                    li
+                      a(href='/team') About Us
+                    li
+                      a(href='/contact') Get in Touch
+                  // ul
+                //li
+                li.getstarted
+                 button(type="button", data-href="/").btn.btn-success.linkHelper.marginTop10 Free Evaluation
+            // /.nav-collapse
+
+        block intro
+
+        +flash-messages(messages)
+
+        block content
+
+        // FOOTER
+        #f
+          .container
+            .col-lg-12
+              br
+              | Challenges 
+              | Pricing 
+              | Content
+              | About
+              | Contact
+              | Twitter
+
+          // row
+        // container
+        // Footer
+        // MODAL FOR CONTACT
+        // Modal
+        #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+          .modal-dialog
+            .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                h4#myModalLabel.modal-title contact us
+              .modal-body
+                .row.centered
+                  p We are available 24/7, so don't hesitate to contact us.
+                  p
+                    | Somestreet Ave, 987
+                    br
+                    | London, UK.
+                    br
+                    | +44 8948-4343
+                    br
+                    | hi@blacktie.co
+                  #mapwrap
+                    iframe(height='300', width='100%', frameborder='0', scrolling='no', marginheight='0', marginwidth='0', src='https://www.google.es/maps?t=m&ie=UTF8&ll=52.752693,22.791016&spn=67.34552,156.972656&z=2&output=embed')
+              .modal-footer
+                button.btn.btn-danger(type='button', data-dismiss='modal') Save & Go
+            // /.modal-content
+          // /.modal-dialog
+        // /.modal
+        script(src="js/lib/jquery/jquery-1.11.1.js")
+        script(src="/js/lib/bootstrap/bootstrap-3.2.0.min.js")
+        script(src="/js/scripts.js")
