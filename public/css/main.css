@@ -1943,6 +1943,7 @@ hr {
 }
 .blog-wrap .blog-post.single .content p {
   font-size: 18px;
+  text-align: left;
   color: #2b2f36;
   font-family: 'ProximaNova-Regular';
   line-height: 1.8;
@@ -1952,6 +1953,7 @@ hr {
 .blog-wrap .blog-post.single .content h2 {
   font-family: 'ProximaNova-Light';
   font-size: 24px;
+  font-weight: bold;
   color: #2b2f36;
   margin: 30px 0;
   padding: 0;

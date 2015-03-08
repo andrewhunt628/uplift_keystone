@@ -1,28 +1,101 @@
 extends ../layouts/default
 
 block content
-	.container: .row: .col-sm-10.col-sm-offset-1.col-md-8
-		article
-			
-			if !data.post
-				h2 Invalid Post.
-			else
-				header
-					h1= data.post.title
-					h5.text-left Posted 
-						if data.post.publishedDate
-							| on #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
-						if data.post.categories && data.post.categories.length
-							| in 
-							each cat, cat_i in data.post.categories
-								a(href='/blog/' + cat.key)= cat.name
-								if cat_i < data.post.categories.length - 1
-									| , 
-								else
-									|  
-						if data.post.author
-							| by #{data.post.author.name.first}
-				.post
-					if data.post.image.exists
-						.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
-					!= data.post.content.full
+
+	.upper
+		.header
+
+			a.logo(href='javascript:void(0)')
+				img(src='../../images/logo.png', alt='uplift', title='uplift')
+			.right
+				nav.upper-nav
+					ul
+						li
+							a(href='javascript:void(0)') Challenges
+						li
+							a(href='javascript:void(0)') Pricing
+						li.dropdown
+							a(href='javascript:void(0)') Resources
+							ul
+								li
+									a(href='javascript:void(0)') Submenu
+								li
+									a(href='javascript:void(0)') Submenu Submenu
+								li
+									a(href='javascript:void(0)') Submenu Submenu Submenu
+						li.dropdown
+							a(href='javascript:void(0)') More
+							ul
+								li
+									a(href='javascript:void(0)') Submenu
+								li
+									a(href='javascript:void(0)') Submenu Submenu
+								li
+									a(href='javascript:void(0)') Submenu Submenu Submenu
+
+				a.evaluate(href='javascript:void(0)') Free evaluation
+
+
+	.blog-wrap
+			.blog
+				.blog-row
+					.blog-offset
+						.blog-columns
+							.blog-left
+								.wrap
+									block left
+										.blog-post.single
+											h1.title Nusce eget justo a ex tincidunt condimentum ac sit amet tellus. 
+											a(href='javascript:void(0)')
+												img.main-image(src='../../images/mark.png', alt='title')
+											.info
+												| By 
+												a(href='javascript:void(0)') Andy Hunt
+												|  in 
+												a(href='javascript:void(0)') Mobil
+												|  on January 24th
+											.content
+												p
+													| Nusce eget justo a ex tincidunt condimentum ac sit amet tellus. Crashtion bibendum aliquet dui vitae bibendum. Vivamus tincidunt vel elit sit amet varius. Phasellus non metus convallis diam rutrum iaculis. Nullam dictum convallis massa, eget eleifend massa tempus at. Fusce rhoncus rhoncus bibendum. Nam dolor mauris. Etiam eu ullamcorper ex 
+													a(href='javascript:void(0)') link
+													| .
+												h2 Secondary Heading
+												p Crashtion bibendum aliquet dui vitae bibendum. Vivamus tincidunt vel elit sit amet varius. Phasellus non metus convallis diam rutrum iaculis. Nullam dictum convallis massa, eget eleifend massa tempus at. Fusce rhoncus rhoncus bibendum. 
+												img(src='../../images/post-image.jpg', alt='Mark2')
+
+											.social
+												.widgets
+													.widget.fb
+														.fb-like(data-href='https://developers.facebook.com/docs/plugins/',data-layout='button_count',data-action='like', data-show-faces='false', data-share='false')
+													.widget.tw
+														a.twitter-share-button(href='https://twitter.com/share') Tweet
+														script.
+															!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+													.widget.gplus
+														.g-plusone(data-size='tall', data-annotation='none')
+												a.comments(href='javascript:void(0)') 12 comments
+
+
+							.blog-right
+								.wrap
+									block right
+										.join
+											h2.title Join our Community
+											.info Become a CRO expert! Sing up for e-mail updates, industry research, and more good ol' geekery.
+										.explore
+											.title Explore Content
+											ul.categories
+												li.active
+													a(href='') All categories
+												li
+													a(href='') E-Commerce
+												li
+													a(href='') Mobil
+												li
+													a(href='') Praesent 
+												li
+													a(href='') Bibendum 
+												li
+													a(href='') Magna
+												li
+													a(href='') Mauris
