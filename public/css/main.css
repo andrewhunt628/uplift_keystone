@@ -1790,6 +1790,259 @@ hr {
   font-size: 18px;
 }
 
+/*.questions-block-wrap {*/
+.questions-block {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid #f1f2f3;
+  padding-bottom: 65px;
+}
+@media (min-width: 768px) {
+  .questions-block {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .questions-block {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .questions-block {
+    width: 1170px;
+  }
+}
+.questions-block .questions-wrap {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.questions-block .questions-wrap .questions-offset {
+  position: relative;
+  float: left;
+  width: 83.33333333%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 8.33333333%;
+}
+.questions-block .questions-wrap .questions-offset .questions {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 0;
+}
+.questions-block .questions-wrap .questions-offset .questions .question {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 50px;
+  text-align: center;
+  list-style: none;
+}
+.questions-block .questions-wrap .questions-offset .questions .question .title {
+  font-family: 'ProximaNova-Bold';
+  font-size: 16px;
+  color: #2b2f36;
+  padding-bottom: 20px;
+}
+.questions-block .questions-wrap .questions-offset .questions .question .descr {
+  font-family: 'ProximaNova-Regular';
+  font-size: 16px;
+  color: #9ea8b5;
+  line-height: 1.8;
+}
+.questions-block .questions-wrap .questions-offset .questions .question .descr:after {
+  content: ' ';
+  display: block;
+  width: 30px;
+  margin: 0 auto;
+  height: 1px;
+  background: #9ea8b5;
+  margin-top: 40px;
+}
+/*}*/
+.pricing {
+  background: #d9dde4;
+  padding-top: 65px;
+}
+.pricing .plans {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .pricing .plans {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .pricing .plans {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .pricing .plans {
+    width: 1170px;
+  }
+}
+.pricing .plans .plans-offset {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.pricing .plans .plans-offset .plans-wrap {
+  position: relative;
+  float: left;
+  width: 66.66666667%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 16.66666667%;
+}
+.pricing .plans .plans-offset .plans-wrap .main-title {
+  font-family: 'ProximaNova-Bold';
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #2b2f36;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+.pricing .plans .plans-offset .plans-wrap .descr {
+  font-family: 'AvenirLTStd-Light';
+  color: #868f9b;
+  font-size: 16px;
+  text-align: center;
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 0;
+  padding-top: 55px;
+  padding-bottom: 70px;
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  list-style: none;
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap {
+  background: #fff;
+  margin: 0 -5px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.08);
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .title {
+  font-family: 'ProximaNova-Light';
+  color: #2d2d2d;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #efefef;
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .details {
+  padding-top: 40px;
+  padding-left: 35px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #efefef;
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .details ul {
+  margin: 0;
+  padding: 0;
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .details ul li {
+  list-style: none;
+  padding-bottom: 30px;
+  padding-left: 10%;
+  font-size: 16px;
+  color: #9ea8b5;
+  font-family: 'ProximaNova-Regular';
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .details ul li b {
+  font-family: 'ProximaNova-Bold';
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .details ul li.check {
+  background: url(../images/check-small.png) no-repeat left 4px;
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .details ul li.plus {
+  background: url(../images/plus.png) no-repeat left 4px;
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .details ul li.up {
+  background: url(../images/up.png) no-repeat left 4px;
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .quote {
+  font-family: 'ProximaNova-Regular';
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #9ea8b5;
+  text-align: center;
+  letter-spacing: 1px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
+.pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .get {
+  font-family: 'ProximaNova-Semibold';
+  background: #62ba62;
+  /* Old browsers */
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #62ba62), color-stop(100%, #74c274));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #62ba62 0%, #74c274 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #62ba62 0%, #74c274 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62ba62', endColorstr='#74c274', GradientType=0);
+  /* IE6-9 */
+  display: block;
+  color: #fff;
+  border-left: 1px solid #438d43;
+  border-bottom: 1px solid #438d43;
+  border-right: 1px solid #438d43;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.more-questions {
+  text-align: center;
+  padding-top: 55px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #f1f2f3;
+}
+.more-questions .title {
+  font-family: 'ProximaNova-Regular';
+  font-size: 28px;
+  color: #2b2f36;
+  margin-bottom: 30px;
+}
+.more-questions .button {
+  font-family: 'ProximaNova-Bold';
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background: #4fa84f;
+  margin-left: 15px;
+  padding: 5px 15px;
+  color: #fff;
+  padding: 10px 25px;
+}
+
 
 /*
   BLOG
