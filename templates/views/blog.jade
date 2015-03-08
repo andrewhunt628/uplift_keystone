@@ -27,48 +27,92 @@ block intro
 		
 
 block content
-	.container: .row
-		.col-sm-8.col-md-9
-			if filters.category && !data.category
-				h3.text-muted Invalid Category.
-			else
-				if data.posts.results.length
-					if data.posts.totalPages > 1
-						h4.text-weight-normal 
-					else
-						h4.text-weight-normal 
-					.blog
-						each post in data.posts.results
-							+post(post)
-					
-					if data.posts.totalPages > 1
-						ul.pagination
-							if data.posts.previous
-								li: a(href='?page=' + data.posts.previous): span.glyphicon.glyphicon-chevron-left
-							else
-								li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
-							each p, i in data.posts.pages
-								li(class=data.posts.currentPage == p ? 'active' : null)
-									a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
-							if data.posts.next
-								li: a(href='?page=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
-							else
-								li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
-				else
-					if data.category
-						h3.text-muted There are no posts in the category #{data.category.name}.
-					else
-						h3.text-muted There are no posts yet.
-		
-		if data.categories.length
-			.col-sm-4.col-md-3
 
-				h3 Join our Community
-				p.text-left
-					| Become a CRO expert! Sign up for e-mail updates, industry research,
-					| and more good ol' geekery.
-				h3 Explore Content
-				.list-group(style='margin-top: 70px;')
-					a(href='/blog', class=!data.category ? 'active' : false).list-group-item All Categories
-					each cat in data.categories
-						a(href='/blog/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
+	.upper
+		.header
+
+			a.logo(href='javascript:void(0)')
+				img(src='images/logo.png', alt='uplift', title='uplift')
+			.right
+				nav.upper-nav
+					ul
+						li
+							a(href='javascript:void(0)') Challenges
+						li
+							a(href='javascript:void(0)') Pricing
+						li.dropdown
+							a(href='javascript:void(0)') Resources
+							ul
+								li
+									a(href='javascript:void(0)') Submenu
+								li
+									a(href='javascript:void(0)') Submenu Submenu
+								li
+									a(href='javascript:void(0)') Submenu Submenu Submenu
+						li.dropdown
+							a(href='javascript:void(0)') More
+							ul
+								li
+									a(href='javascript:void(0)') Submenu
+								li
+									a(href='javascript:void(0)') Submenu Submenu
+								li
+									a(href='javascript:void(0)') Submenu Submenu Submenu
+
+				a.evaluate(href='javascript:void(0)') Free evaluation
+
+
+	.blog-wrap
+		.blog
+			.blog-row
+				.blog-offset
+					.blog-columns
+						.blog-left
+							.wrap
+								block left
+									ul.blog-posts
+										each value in Array(3)
+											li.blog-post
+												a.title(href='javascript:void(0)') Nusce eget justo a ex tincidunt condimentum ac sit amet tellus. 
+												a(href='javascript:void(0)')
+													img.main-image(src='images/mark.png', alt='title')
+												.info
+													| By 
+													a(href='javascript:void(0)') Andy Hunt
+													|  in 
+													a(href='javascript:void(0)') Mobil
+													|  on January 24th
+												.intro Nusce eget justo a ex tincidunt condimentum ac sit amet tellus. Crashtion bibendum aliquet dui vitae bibendum. Vivamus tincidunt vel elit sit amet varius. Phasellus non metus convallis diam rutrum iaculis. Nullam dictum convallis massa, eget eleifend massa tempus at. Fusce rhoncus rhoncus bibendum. Nam dolor mauris, tincidunt mattis quam ut, blandit blandit 
+												a.moar(href='javascript:void(0)') continue reading
+
+							.pagination
+								a.pg-button(href='javascript:void(0)')
+									span.left
+									| Prev
+								a.pg-button.disabled(href='javascript:void(0)')
+									| Next
+									span.right
+
+						.blog-right
+							.wrap
+								block right
+									.join
+										h2.title Join our Community
+										.info Become a CRO expert! Sing up for e-mail updates, industry research, and more good ol' geekery.
+									.explore
+										.title Explore Content
+										ul.categories
+											li.active
+												a(href='') All categories
+											li
+												a(href='') E-Commerce
+											li
+												a(href='') Mobil
+											li
+												a(href='') Praesent 
+											li
+												a(href='') Bibendum 
+											li
+												a(href='') Magna
+											li
+												a(href='') Mauris
