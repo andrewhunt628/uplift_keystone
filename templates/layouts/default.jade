@@ -42,41 +42,6 @@ html
 
     //- HTML BODY
     body
-        .navbar.navbar-inverse.navbar-static-top
-          .container
-            .navbar-header
-              a.navbar-brand(href='/') uplift
-            .navbar-collapse.collapse
-              ul.nav.navbar-nav.navbar-right
-                li
-                  a(href='/challenge') Challenges
-                li
-                  a(href='/pricing') Pricing
-                li
-                  a(href='/pricing', data-toggle='dropdown')
-                    | Resources
-                    b.caret
-                  ul.dropdown-menu(role='menu')
-                    li
-                      a(href='/blog') Blog
-                    li
-                      a(href='/customers') Case Studies
-                  // ul
-                //li
-                li
-                  a(href='/pricing', data-toggle='dropdown')
-                    | More
-                    b.caret
-                  ul.dropdown-menu(role='menu')
-                    li
-                      a(href='/team') About Us
-                    li
-                      a(href='/contact') Get in Touch
-                  // ul
-                //li
-                li.getstarted
-                 button(type="button", data-href="/").btn.btn-success.linkHelper.marginTop10 Free Evaluation
-            // /.nav-collapse
 
         block intro
 
@@ -85,16 +50,26 @@ html
         block content
 
         // FOOTER
-        #f
-          .container
-            .col-lg-12
-              br
-              | Challenges 
-              | Pricing 
-              | Content
-              | About
-              | Contact
-              | Twitter
+        .footer
+          .footer-wrap
+            .footer-nav
+              ul(style='float:left;margin-top: 0;')
+                li
+                  a(href='javacript:void(0)') Challenges
+                li
+                  a(href='javacript:void(0)') Pricing
+                li
+                  a(href='javacript:void(0)') Content
+                li
+                  a(href='javacript:void(0)') About
+                li
+                  a(href='javacript:void(0)') Contact
+              ul
+                li.tw
+                  a(href='javacript:void(0)') Twitter
+            .copy © 2015 Uplift. All rights reserverd.
+            .logo-wrap
+              a.logo(href='javascript:void(0)') uplift
 
           // row
         // container

@@ -1,81 +1,106 @@
 extends ../layouts/default
 
 block content
-    //
-            
-    #headerwrap
-      .container
-        .row
-          .col-lg-12
-            h2.text-center.headline 
-              | Increase conversion rate - guaranteed
-            h5.text-center
-              br
-              | Challenge top optimization experts to improve site performance. Only pay for <i><style="text-decoration: underline">results</style></i>. 
-              br
-              br
-              br
-              form.form-inline
-                .form-group
-                  label.sr-only(for='inputEmail') Type your URL
-                  input#inputURL.form-control(type='email', placeholder='Type your URL')
-                .form-group
-                  label.sr-only(for='inputPassword') Email
-                  input#inputEmail.form-control(type='email', placeholder='Enter your email')
-                button.btn.btn-success(type='submit') Get Started
-      // container
-    // headerwrap
+  .upper
+    .header
 
-    .container.homepagesub
-      .row
-        .col-lg-12
-          .row.subheader
-            
-            .col-lg-4
-              img(src='/images/results.png', align='middle')
-              br
-              p
-                | <b>Optimize Anything</b> <br>
-                | E-commerce, mobile apps, <br>landing pages & more
-            .col-lg-4
-              img(src='/images/results.png', align='middle')
-              br
-              p
-                | <b>Simple Pricing</b> <br>
-                | Pay-on-performance contracts. <br>No consulting fees.
-            .col-lg-4
-              img(src='/images/results.png', align='middle')
-              br
-              p
-                | <b>Guaranteed Results</b> <br>
-                | Only pay for <br>
-                | conversion improvement.
-      //row
-    //container
+      a.logo(href='javascript:void(0)')
+        img(src='images/logo.png', alt='uplift', title='uplift')
+      
+      .right
+        nav.upper-nav
+          ul
+            li
+              a(href='javascript:void(0)') Challenges
+            li
+              a(href='javascript:void(0)') Pricing
+            li.dropdown
+              a(href='javascript:void(0)') Resources
+              ul
+                li
+                  a(href='javascript:void(0)') Submenu
+                li
+                  a(href='javascript:void(0)') Submenu Submenu
+                li
+                  a(href='javascript:void(0)') Submenu Submenu Submenu
+            li.dropdown
+              a(href='javascript:void(0)') More
+              ul
+                li
+                  a(href='javascript:void(0)') Submenu
+                li
+                  a(href='javascript:void(0)') Submenu Submenu
+                li
+                  a(href='javascript:void(0)') Submenu Submenu Submenu
 
-    .container.homepagesub2
-      .row
-        .col-lg-12
-          h2.text-center
-            | Our Results
-        .row.subheader
-            .col-lg-4
-              
-              h1.text-center
-                | <b>+ 28%</b> <br>
-              p
-                | Average Uplift
-            .col-lg-4
-             
-              h1.text-center
-                | <b>$11.2M</b> <br>
-              p
-                | Total Additional Sales
-            .col-lg-4
-              h1.text-center
-                | <b>12x</b> <br>
-              p
-                | Average ROI  
-      //row
-    //container
-    
+        a.evaluate(href='javascript:void(0)') Free evaluation
+
+
+    .hero
+      .info
+        h1.main-title Increase conversion rate - guaranteed
+        p.main-description Challenge top optimization experts to improve site performance. 
+          span Only pay for results.
+      .form
+        form(method='POST', action='/')
+          fieldset.input-group
+            input.url(type='text', placeholder='Type your URL')
+            input.email(type='text', placeholder='Enter your Email')
+          input.submit(type='submit', value='Get Started')
+    .graph
+      img(src='images/graph.png', alt='uplift')
+
+
+
+  .advantages-wrap
+    .advantages
+      .adv-wrap
+        .adv-offset
+          h2.main-title We make it easy to increase conversion rates
+          ul
+            li.optimizing
+              .icon
+                img(src='images/devices.png', alt='Optimize Anything')
+              .title Optimize Anything
+              .descr
+                | E-commerce, mobile, apps,
+                br
+                | landings pages & more.
+            li.pricing
+              .icon
+                img(src='images/stat.png', alt='Simple Pricing')
+              .title Simple Pricing
+              .descr
+                | Pay-on-performance contracts.
+                br
+                | No consulting fees.
+            li.results
+              .icon
+                img(src='images/check.png', alt='Guaranteed Results')
+              .title Guaranteed Results
+              .descr
+                | Only pay for conversion
+                br
+                | improvement.
+
+  .results-wrap
+    .results
+      .res-wrap
+        .res-offset
+          h2.main-title Our progress to date
+          ul
+            li
+              .value
+                span + 
+                |  28%
+              .descr Average Uplift
+            li
+              .value
+                span $ 
+                |  11.2 M
+              .descr Total Additional Sales
+            li
+              .value
+                |  12 X
+                //- span X 
+              .descr Average ROI
