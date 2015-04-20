@@ -20,14 +20,14 @@ Enquiry.add({
 		{ value: 'question', label: "I've got a question" },
 		{ value: 'other', label: "Something else..." }
 	] },
-	message: { type: Types.Markdown, required: true },
+	message: { type: String },
 	createdAt: { type: Date, default: Date.now }
 });
 
 Enquiry.schema.pre('save', function(next) {
 	this.wasNew = this.isNew;
 	next();
-})
+});
 
 Enquiry.schema.post('save', function() {
 	if (this.wasNew) {
@@ -59,8 +59,8 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 		
 	});
 	
-}
+};
 
 Enquiry.defaultSort = '-createdAt';
-Enquiry.defaultColumns = 'name, email, enquiryType, createdAt';
+Enquiry.defaultColumns = 'email, message, createdAt';
 Enquiry.register();

@@ -10,9 +10,7 @@ var keystone = require('keystone');
 // and documentation.
 
 keystone.init({
-
-	'cloudinary config': 'cloudinary://717221618865323:TrEA2j3Bi5Js1XhZ8N61psFMyf8@dnr2h8ehl',
-
+	
 	'name': 'uplift',
 	'brand': 'uplift',
 	
@@ -28,7 +26,8 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': '1T;34"CM-zD{SQ;]#tOmfNE>2F-=X&gVlrkO=3*;b=:LS<6qp_7XXNr5hJMM?;JP'
+	'cookie secret': '1T;34"CM-zD{SQ;]#tOmfNE>2F-=X&gVlrkO=3*;b=:LS<6qp_7XXNr5hJMM?;JP',
+	'mandrill api key': process.env.MANDRILL_API_KEY
 
 });
 
@@ -95,6 +94,9 @@ keystone.set('nav', {
 	'enquiries': 'enquiries',
 	'users': 'users'
 });
+
+// keystone.set('mandrill api key', 'pejcGmJUlC4IHtQI9089vw');
+// keystone.set('mandrill username', 'sanchez.marcos.germ@gmail.com');
 
 // Start Keystone to connect to your database and initialise the web server
 

@@ -1,40 +1,32 @@
 extends ../layouts/default
 
+mixin post(post)
+	li.blog-post
+		a.title(href='/blog/post/' + post.slug)= post.title 
+		a(href='javascript:void(0)')
+			img.main-image(src=post._.image.fit())
+		.info
+			| By 
+			a(href='javascript:void(0)') #{post.author.name.first} #{post.author.name.last}
+			if post.categories && post.categories.length
+				|	in 
+				each cat, i in post.categories
+					a(href='/blog/' + cat.key)= cat.name
+					if i < post.categories.length - 1
+						| , 
+					else
+						| 
+			|	on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+		.intro!= post.content.brief
+			
+		script(type="text/javascript") var disqus_shortname = 'upliftroi'; (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();
+		noscript
+			| Please enable JavaScript to view the
+			a(href="https://disqus.com/?ref_noscript", rel="nofollow") comments powered by Disqus.
+		#disqus_thread(style="padding:30px;padding-bottom:0px;")
+
 block content
-
-	.upper
-		.header
-
-			a.logo(href='javascript:void(0)')
-				img(src='../../images/logo.png', alt='uplift', title='uplift')
-			.right
-				nav.upper-nav
-					ul
-						li
-							a(href='javascript:void(0)') Challenges
-						li
-							a(href='javascript:void(0)') Pricing
-						li.dropdown
-							a(href='javascript:void(0)') Resources
-							ul
-								li
-									a(href='javascript:void(0)') Submenu
-								li
-									a(href='javascript:void(0)') Submenu Submenu
-								li
-									a(href='javascript:void(0)') Submenu Submenu Submenu
-						li.dropdown
-							a(href='javascript:void(0)') More
-							ul
-								li
-									a(href='javascript:void(0)') Submenu
-								li
-									a(href='javascript:void(0)') Submenu Submenu
-								li
-									a(href='javascript:void(0)') Submenu Submenu Submenu
-
-				a.evaluate(href='javascript:void(0)') Free evaluation
-
+	include nav-blue-default.jade
 
 	.blog-wrap
 			.blog
@@ -44,58 +36,23 @@ block content
 							.blog-left
 								.wrap
 									block left
-										.blog-post.single
-											h1.title Nusce eget justo a ex tincidunt condimentum ac sit amet tellus. 
-											a(href='javascript:void(0)')
-												img.main-image(src='../../images/mark.png', alt='title')
-											.info
-												| By 
-												a(href='javascript:void(0)') Andy Hunt
-												|  in 
-												a(href='javascript:void(0)') Mobil
-												|  on January 24th
-											.content
-												p
-													| Nusce eget justo a ex tincidunt condimentum ac sit amet tellus. Crashtion bibendum aliquet dui vitae bibendum. Vivamus tincidunt vel elit sit amet varius. Phasellus non metus convallis diam rutrum iaculis. Nullam dictum convallis massa, eget eleifend massa tempus at. Fusce rhoncus rhoncus bibendum. Nam dolor mauris. Etiam eu ullamcorper ex 
-													a(href='javascript:void(0)') link
-													| .
-												h2 Secondary Heading
-												p Crashtion bibendum aliquet dui vitae bibendum. Vivamus tincidunt vel elit sit amet varius. Phasellus non metus convallis diam rutrum iaculis. Nullam dictum convallis massa, eget eleifend massa tempus at. Fusce rhoncus rhoncus bibendum. 
-												img(src='../../images/post-image.jpg', alt='Mark2')
-
-											.social
-												.widgets
-													.widget.fb
-														.fb-like(data-href='https://developers.facebook.com/docs/plugins/',data-layout='button_count',data-action='like', data-show-faces='false', data-share='false')
-													.widget.tw
-														a.twitter-share-button(href='https://twitter.com/share') Tweet
-														script.
-															!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-													.widget.gplus
-														.g-plusone(data-size='tall', data-annotation='none')
-												a.comments(href='javascript:void(0)') 12 comments
-
-
+										ul.blog-posts
+											+post(data.post)
 							.blog-right
 								.wrap
 									block right
 										.join
 											h2.title Join our Community
-											.info Become a CRO expert! Sing up for e-mail updates, industry research, and more good ol' geekery.
-										.explore
-											.title Explore Content
-											ul.categories
-												li.active
-													a(href='') All categories
-												li
-													a(href='') E-Commerce
-												li
-													a(href='') Mobil
-												li
-													a(href='') Praesent 
-												li
-													a(href='') Bibendum 
-												li
-													a(href='') Magna
-												li
-													a(href='') Mauris
+											.info Become a CRO expert! Sign up for e-mail updates, industry research, and more good ol' geekery.
+											//- Mailchimp
+											include mailchimp.jade
+
+									.explore
+										.title Explore Content
+										if data.post.categories.length
+										ul.categories
+											li(class=!data.post.category ? 'active' : false)
+												a(href='/blog') All categories
+											each cat in data.post.categories
+												li(class=data.post.category && data.post.category.id == cat.id ? 'active' : false)
+													a(href='/blog/' + cat.key)= cat.name

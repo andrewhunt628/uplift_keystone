@@ -1,8 +1,11 @@
 extends ../layouts/default
 
 block content
+
+    include nav-blue-default.jade
+
     #challengeheader
-      .container.calign.image-1
+      .container.calign.image-1(style="max-width: 1158px; width: auto;")
         .row.centered
           .col-lg-12
             h2.image-1 A faster way to boost conversion
@@ -11,57 +14,53 @@ block content
       // container
     // challengeheader
 
-    .container.w
+    .container.w(style="max-width: 1158px; width: auto;")
       .row
         .col-lg-12
-          .container.calign.image-3
-            h2.mid-promo.image-4 Get test ideas, lightning-fast
+          .container.calign.image-3(style="max-width: 1158px; width: auto;")
+            h2.mid-promo.image-4.main-title Get test ideas, lightning-fast
             p
               | Let experts from 20+ countries review your site and <br>provide ideas for increased performance.
             .site.image-3
-            .popup.left.popup-1(style='width: 290px')
+            .popup.left.popup-1.hidden-xs.hidden-sm(style='width: 290px')
               .cap
               .body
                 .lb
                 .rb
-                .text
-                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                .text Change headline on the homepage
               // body
               .ftr
                 .arw
               // ftr
             //popup
-            .popup.left.popup-2(style='width: 265px')
+            .popup.left.popup-2.hidden-xs.hidden-sm(style='width: 265px')
               .cap
               .body
                 .lb
                 .rb
-                .text
-                  | Duis aute irure dolor in velit.
+                .text Add key calls to action
               // body
               .ftr
                 .arw
               // ftr
             //popup
-            .popup.right.popup-3(style='width: 290px')
+            .popup.right.popup-3.hidden-xs.hidden-sm(style='width: 290px')
               .cap
               .body
                 .lb
                 .rb
-                .text
-                  | Ut enim ad minim veniam, quis nostrud exercitation.
+                .text Remove form the input fields
               // body
               .ftr
                 .arw
               // ftr
             //popup
-            .popup.right.popup-4(style='width: 290px')
+            .popup.right.popup-4.hidden-xs.hidden-sm(style='width: 290px')
               .cap
               .body
                 .lb
                 .rb
-                .text
-                  | Excepteur sint occaecat cupidatat non proident, sut in culpa qui officia deserunt
+                .text Add security affirmations
               // body
               .ftr
                 .arw
@@ -71,34 +70,26 @@ block content
 
       .row
         .col-lg-12
-          .container.calign.image-3
-            h2.mid-promo.image-4 Easy implementation
+          .container.calign.image-3(style="max-width: 1158px; width: auto;")
+            h2.mid-promo.image-4.main-title Easy implementation
             p.description
               | Simply install one piece of testing code on your site. We'll do <br>
               | all the heavy lifting to make design changes to your site.
 
             .site-highlighted.image-3
-            .idea-1
-            .idea-2
-            .idea-3
-            .idea-4
+            .idea-1.hidden-xs.hidden-sm
+            .idea-2.hidden-xs.hidden-sm
+            .idea-3.hidden-xs.hidden-sm
+            .idea-4.hidden-xs.hidden-sm
 
-      .row
-        .col-lg-12
-          .container.calign.image-4
-            h2.mid-promo.image-4 Pay for results
+
+          .container.calign.image-4(style="width: auto;")
+            h2.mid-promo.image-4.main-title Pay for results
             p.description
               | No agency or consulting fees. Our pay-on-performance pricing model makes sure <br>
               | you only pay for conversion improvement.
-      .row
-        .col-lg-12
-          .container.calign
-            h2.mid-promo.image-5 Want to learn more?
-            a.button.green.button-image5-pp(href='/partnerships')
-              | Get a free evalation for your site.
-          // container
 
-      br
-      br
-    // container
-    // PORTFOLIO SECTION
+          .more-questions
+            //- 28 reg 2b2f36
+            .title Want to learn more?
+            .button(data-toggle="modal" data-target="#myModal") Get a free evalation for your site.

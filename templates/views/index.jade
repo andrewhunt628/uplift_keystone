@@ -1,57 +1,9 @@
 extends ../layouts/default
 
 block content
-  .upper
-    .header
-
-      a.logo(href='/')
-        img(src='images/logo.png', alt='uplift', title='uplift')
-      
-      .right
-        nav.upper-nav
-          ul
-            li
-              a(href='/challenge') Challenges
-            li
-              a(href='/pricing') Pricing
-            li.dropdown
-              a(href='javascript:void(0)') Resources
-              ul
-                li
-                  a(href='javascript:void(0)') Submenu
-                li
-                  a(href='javascript:void(0)') Submenu Submenu
-                li
-                  a(href='javascript:void(0)') Submenu Submenu Submenu
-            li.dropdown
-              a(href='javascript:void(0)') More
-              ul
-                li
-                  a(href='javascript:void(0)') Submenu
-                li
-                  a(href='javascript:void(0)') Submenu Submenu
-                li
-                  a(href='javascript:void(0)') Submenu Submenu Submenu
-
-        a.evaluate(href='javascript:void(0)') Free evaluation
-
-
-    .hero
-      .info
-        h1.main-title Increase conversion rate - guaranteed
-        p.main-description Challenge top optimization experts to improve site performance. 
-          span Only pay for results.
-      .form
-        form(method='POST', action='/')
-          fieldset.input-group
-            input.url(type='text', placeholder='Type your URL')
-            input.email(type='text', placeholder='Enter your Email')
-          input.submit(type='submit', value='Get Started')
-    .graph
-      img(src='images/graph.png', alt='uplift')
-
-
-
+  
+  include nav-home.jade
+  
   .advantages-wrap
     .advantages
       .adv-wrap
@@ -101,6 +53,7 @@ block content
               .descr Total Additional Sales
             li
               .value
-                |  12 X
+                |  8 X
                 //- span X 
               .descr Average ROI
+

@@ -1,0 +1,46 @@
+block intro
+  .upper.upper-blue
+    .header
+      
+      .uplift-logo
+        a.logo(href='/') uplift
+
+      .right
+
+        nav.upper-nav
+
+          ul
+            li
+              a(href='challenge') Challenges
+              
+            //- li.dropdown
+              a(href='javascript:void(0)') Product
+
+              ul.dropdown-menu
+                li
+                  a(href='challenge') Challenges
+                //- li
+                  a(href='javascript:void(0)') Dinamic Pricing
+
+            li
+              a(href='/pricing') Pricing
+
+            li.dropdown
+              a(href='javascript:void(0)') Resources
+
+              ul.dropdown-menu
+                li
+                  a(href='/blog') Blog
+                li
+                  a(href='/team') About Us
+                li
+                  a(href='/contact') Contact Us
+
+        .phone-number
+          i.glyphicon.glyphicon-earphone
+          span 512 650 0972
+
+        .evaluate(data-toggle="modal" data-target="#myModal") Free evaluation
+
+
+  +flash-messages(messages)

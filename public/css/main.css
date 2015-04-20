@@ -1,11 +1,42 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: 'AvenirLTStd-Roman' !important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
+}
+
+@font-face {
+  font-family: 'AvenirLTStd-Roman';
+  src: url('../fonts/AvenirLTStd-Roman.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirLTStd-Roman.otf') format('opentype'), url('../fonts/AvenirLTStd-Roman.woff') format('woff'), url('../fonts/AvenirLTStd-Roman.ttf') format('truetype'), url('../fonts/AvenirLTStd-Roman.svg#AvenirLTStd-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AvenirLTStd-Medium';
+  src: url('../fonts/AvenirLTStd-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirLTStd-Medium.otf') format('opentype'), url('../fonts/AvenirLTStd-Medium.woff') format('woff'), url('../fonts/AvenirLTStd-Medium.ttf') format('truetype'), url('../fonts/AvenirLTStd-Medium.svg#AvenirLTStd-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AvenirLTStd-Heavy';
+  src: url('../fonts/AvenirLTStd-Heavy.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirLTStd-Heavy.otf') format('opentype'), url('../fonts/AvenirLTStd-Heavy.woff') format('woff'), url('../fonts/AvenirLTStd-Heavy.ttf') format('truetype'), url('../fonts/AvenirLTStd-Heavy.svg#AvenirLTStd-Heavy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AvenirLTStd-Light';
+  src: url('../fonts/AvenirLTStd-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirLTStd-Light.otf') format('opentype'), url('../fonts/AvenirLTStd-Light.woff') format('woff'), url('../fonts/AvenirLTStd-Light.ttf') format('truetype'), url('../fonts/AvenirLTStd-Light.svg#AvenirLTStd-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AvenirNextLTPro-UltLt';
+  src: url('../fonts/AvenirNextLTPro-UltLt.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirNextLTPro-UltLt.woff') format('woff'), url('../fonts/AvenirNextLTPro-UltLt.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-UltLt.svg#AvenirNextLTPro-UltLt') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 article,
 aside,
@@ -188,7 +219,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'AvenirLTStd-Roman', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -1253,76 +1284,7 @@ hr {
   }
 }
 
-@font-face {
-  font-family: 'AvenirLTStd-Roman';
-  src: url('../fonts/AvenirLTStd-Roman.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirLTStd-Roman.otf') format('opentype'), url('../fonts/AvenirLTStd-Roman.woff') format('woff'), url('../fonts/AvenirLTStd-Roman.ttf') format('truetype'), url('../fonts/AvenirLTStd-Roman.svg#AvenirLTStd-Roman') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'AvenirLTStd-Medium';
-  src: url('../fonts/AvenirLTStd-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirLTStd-Medium.otf') format('opentype'), url('../fonts/AvenirLTStd-Medium.woff') format('woff'), url('../fonts/AvenirLTStd-Medium.ttf') format('truetype'), url('../fonts/AvenirLTStd-Medium.svg#AvenirLTStd-Medium') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'AvenirLTStd-Heavy';
-  src: url('../fonts/AvenirLTStd-Heavy.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirLTStd-Heavy.otf') format('opentype'), url('../fonts/AvenirLTStd-Heavy.woff') format('woff'), url('../fonts/AvenirLTStd-Heavy.ttf') format('truetype'), url('../fonts/AvenirLTStd-Heavy.svg#AvenirLTStd-Heavy') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'AvenirLTStd-Light';
-  src: url('../fonts/AvenirLTStd-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirLTStd-Light.otf') format('opentype'), url('../fonts/AvenirLTStd-Light.woff') format('woff'), url('../fonts/AvenirLTStd-Light.ttf') format('truetype'), url('../fonts/AvenirLTStd-Light.svg#AvenirLTStd-Light') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'AvenirNextLTPro-UltLt';
-  src: url('../fonts/AvenirNextLTPro-UltLt.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirNextLTPro-UltLt.woff') format('woff'), url('../fonts/AvenirNextLTPro-UltLt.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-UltLt.svg#AvenirNextLTPro-UltLt') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNova-Semibold';
-  src: url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Semibold.otf') format('opentype'), url('../fonts/ProximaNova-Semibold.woff') format('woff'), url('../fonts/ProximaNova-Semibold.ttf') format('truetype'), url('../fonts/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNova-Light';
-  src: url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Light.otf') format('opentype'), url('../fonts/ProximaNova-Light.woff') format('woff'), url('../fonts/ProximaNova-Light.ttf') format('truetype'), url('../fonts/ProximaNova-Light.svg#ProximaNova-Light') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNova-Bold';
-  src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Bold.otf') format('opentype'), url('../fonts/ProximaNova-Bold.woff') format('woff'), url('../fonts/ProximaNova-Bold.ttf') format('truetype'), url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNova-Regular';
-  src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Regular.otf') format('opentype'), url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 
-.upper {
-  background: #225692;
-  /* Old browsers */
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #225692), color-stop(100%, #1c5699));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #225692 0%, #1c5699 100%);
-  /* Chrome10+,Safari5.1+ */
-  /* Opera 11.10+ */
-  /* IE10+ */
-  background: linear-gradient(to bottom, #225692 0%, #1c5699 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#225692', endColorstr='#1c5699', GradientType=0);
-  /* IE6-9 */
-}
 
 .upper-nav {
   display: inline-block;
@@ -1356,7 +1318,7 @@ hr {
   top: 8px;
 }
 .upper-nav ul li a {
-  font-family: 'ProximaNova-Semibold';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1422,7 +1384,7 @@ hr {
   margin-top: 35px;
 }
 .header .evaluate {
-  font-family: 'ProximaNova-Bold';
+  font-family: 'AvenirLTStd-Roman';
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;
@@ -1434,7 +1396,7 @@ hr {
 }
 .footer .footer-wrap {
   position: relative;
-  font-family: 'ProximaNova-Regular';
+  font-family: 'AvenirLTStd-Roman';
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -1533,13 +1495,13 @@ hr {
   padding-bottom: 55px;
 }
 .upper .hero .info .main-title {
-  font-family: 'ProximaNova-Light';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 50px;
   text-align: center;
   color: #fff;
 }
 .upper .hero .info .main-description {
-  font-family: 'ProximaNova-Regular';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 19px;
   color: #8fb4de;
   text-align: center;
@@ -1664,7 +1626,7 @@ hr {
   margin-left: 8.33333333%;
 }
 .advantages-wrap .advantages .adv-wrap .adv-offset .main-title {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'AvenirLTStd-Roman', sans-serif;
   font-weight: 300;
   font-size: 28px;
   color: #2b2f36;
@@ -1699,12 +1661,12 @@ hr {
   padding-top: 13px;
 }
 .advantages-wrap .advantages .adv-wrap .adv-offset ul li .title {
-  font-family: 'ProximaNova-Bold';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 18px;
   color: #2b2f36;
 }
 .advantages-wrap .advantages .adv-wrap .adv-offset ul li .descr {
-  font-family: 'ProximaNova-Regular';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 16px;
   color: #8b95a2;
 }
@@ -1748,7 +1710,7 @@ hr {
   margin-left: 8.33333333%;
 }
 .results-wrap .results .res-wrap .res-offset .main-title {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'AvenirLTStd-Roman', sans-serif;
   font-weight: 300;
   font-size: 28px;
   color: #2b2f36;
@@ -1772,7 +1734,7 @@ hr {
   text-align: center;
 }
 .results-wrap .results .res-wrap .res-offset ul li .value {
-  font-family: 'ProximaNova-Bold';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 38px;
   color: #72b166;
 }
@@ -1844,13 +1806,13 @@ hr {
   list-style: none;
 }
 .questions-block .questions-wrap .questions-offset .questions .question .title {
-  font-family: 'ProximaNova-Bold';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 16px;
   color: #2b2f36;
   padding-bottom: 20px;
 }
 .questions-block .questions-wrap .questions-offset .questions .question .descr {
-  font-family: 'ProximaNova-Regular';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 16px;
   color: #9ea8b5;
   line-height: 1.8;
@@ -1904,7 +1866,7 @@ hr {
   margin-left: 16.66666667%;
 }
 .pricing .plans .plans-offset .plans-wrap .main-title {
-  font-family: 'ProximaNova-Bold';
+  font-family: 'AvenirLTStd-Roman';
   margin: 0;
   text-transform: uppercase;
   font-size: 22px;
@@ -1942,7 +1904,7 @@ hr {
   box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.08);
 }
 .pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .title {
-  font-family: 'ProximaNova-Light';
+  font-family: 'AvenirLTStd-Roman';
   color: #2d2d2d;
   font-size: 24px;
   text-align: center;
@@ -1966,10 +1928,10 @@ hr {
   padding-left: 10%;
   font-size: 16px;
   color: #9ea8b5;
-  font-family: 'ProximaNova-Regular';
+  font-family: 'AvenirLTStd-Roman';
 }
 .pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .details ul li b {
-  font-family: 'ProximaNova-Bold';
+  font-family: 'AvenirLTStd-Roman';
 }
 .pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .details ul li.check {
   background: url(../images/check-small.png) no-repeat left 4px;
@@ -1981,7 +1943,7 @@ hr {
   background: url(../images/up.png) no-repeat left 4px;
 }
 .pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .quote {
-  font-family: 'ProximaNova-Regular';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 13px;
   text-transform: uppercase;
   color: #9ea8b5;
@@ -1991,7 +1953,7 @@ hr {
   padding-bottom: 30px;
 }
 .pricing .plans .plans-offset .plans-wrap .plan-ex .plan-item .plan-wrap .get {
-  font-family: 'ProximaNova-Semibold';
+  font-family: 'AvenirLTStd-Roman';
   background: #62ba62;
   /* Old browsers */
   /* FF3.6+ */
@@ -2025,13 +1987,13 @@ hr {
   border-bottom: 1px solid #f1f2f3;
 }
 .more-questions .title {
-  font-family: 'ProximaNova-Regular';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 28px;
   color: #2b2f36;
   margin-bottom: 30px;
 }
 .more-questions .button {
-  font-family: 'ProximaNova-Bold';
+  font-family: 'AvenirLTStd-Roman';
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;
@@ -2198,13 +2160,13 @@ hr {
   font-size: 18px;
   text-align: left;
   color: #2b2f36;
-  font-family: 'ProximaNova-Regular';
+  font-family: 'AvenirLTStd-Roman';
   line-height: 1.8;
   margin: 30px 0;
   padding: 0;
 }
 .blog-wrap .blog-post.single .content h2 {
-  font-family: 'ProximaNova-Light';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 24px;
   font-weight: bold;
   color: #2b2f36;
@@ -2232,7 +2194,7 @@ hr {
   clear: both;
 }
 .blog-wrap .blog-post.single .social .comments {
-  font-family: 'ProximaNova-Regular';
+  font-family: 'AvenirLTStd-Roman';
   color: #9ea8b5;
   text-decoration: none;
 }
@@ -2256,7 +2218,7 @@ hr {
   top: 9px;
 }
 .blog-wrap .blog-post .title {
-  font-family: 'ProximaNova-Light';
+  font-family: 'AvenirLTStd-Roman';
   display: block;
   text-decoration: none;
   font-size: 28px;
@@ -2274,25 +2236,25 @@ hr {
   color: #9ea8b5;
   font-size: 13px;
   margin-bottom: 20px;
-  font-family: 'ProximaNova-Regular';
+  font-family: 'AvenirLTStd-Roman';
 }
 .blog-wrap .blog-post .info a {
   color: #fe471a;
   text-decoration: none;
-  font-family: 'ProximaNova-Bold';
+  font-family: 'AvenirLTStd-Roman';
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 .blog-wrap .blog-post .intro {
   margin: 20px 30px;
   color: #2e2f32;
-  font-family: 'ProximaNova-Light';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 25px;
 }
 .blog-wrap .blog-post .moar {
-  font-family: 'ProximaNova-Bold';
+  font-family: 'AvenirLTStd-Roman';
   font-size: 13px;
   text-transform: uppercase;
   padding-left: 30px;
@@ -2341,7 +2303,7 @@ hr {
 }
 body {
   background: #fff;
-  min-width: 985px;
+/*  min-width: 985px;*/
 }
 
 
@@ -2360,7 +2322,7 @@ body {
 }
 
 .navbar-nav li {
-  font-family: 'Whitney A', 'Whitney B';
+  font-family: AvenirLTStd-Roman;
   font-weight: 400;
   font-size: 16px;
 }
@@ -2383,7 +2345,7 @@ body {
 
 .navbar-inverse .navbar-brand {
 
-    font-family: 'Lato';
+    font-family: 'AvenirLTStd-Roman';
     font-weight: 800;
   color: white;
   font-size: 30px;
@@ -2438,7 +2400,7 @@ body {
 #headerwrap h2 {
     /* font-family: 'Gotham SSm A', 'Gotham SSm B'; */
 
-    font-family: 'Lato';
+    font-family: 'AvenirLTStd-Roman';
     color: white;
     font-size: 52px;
     font-weight: 300;
@@ -2449,7 +2411,7 @@ body {
 }
 
 #headerwrap h5 {
-    font-family: 'Whitney A', 'Whitney B';
+    font-family: AvenirLTStd-Roman;
     color: white;
     font-size: 20px;
 
@@ -2461,13 +2423,13 @@ body {
 }
 
 .homepagesub {
-    font-family: 'Whitney A', 'Whitney B';
+    font-family: AvenirLTStd-Roman;
     background: #f8f9fb;
     margin-top: 30px;
 }
 
 .homepagesub {
-    font-family: 'Whitney A', 'Whitney B';
+    font-family: AvenirLTStd-Roman;
     background: #f8f9fb;
     margin-top: 30px;
 }
@@ -2521,7 +2483,20 @@ body.image-1 {
 .mid-promo {
   text-align: center;
   font-size: 28px;
-  font-family: 'Avenir LT Std 45 Book';
+  font-family: 		.box-container(ng-show="boxStep == 1")
+			.step 1
+			h3 Pick-up Components
+			
+			.components-list
+				//- Component
+				each component in components
+
+					//- Agregar nuevo componente
+					+component-list(component)
+
+			button.secondary(ng-click="boxStep = 2")
+				| Next
+				i.ion-ios-arrow-forward.float-right;
   color: #2b2f36;
 }
 
@@ -2688,9 +2663,9 @@ body a.button.green.button-image5-pp {
 
 .popup .body .text {
   color: #959da7;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.3;
-  font-family: 'Avenir LT Std 45 Book';
+  font-family: AvenirLTStd-Roman;
 }
 
 .popup .body {
@@ -2764,14 +2739,14 @@ h2.description.image-1 {
 
 #challengeheader h2, #pricingheader h2 {
   font-size: 50px;
-  font-family: 'Lato';
+  font-family: 'AvenirLTStd-Roman';
   font-weight: 300;
   color: white;
 }
 
 #pricingheader h2.pricePlan  {
   font-size: 30px;
-  font-family: 'Lato';
+  font-family: 'AvenirLTStd-Roman';
   font-weight: 500;
   color: #1E5799;
 }
@@ -2779,7 +2754,7 @@ h2.description.image-1 {
 
 #challengeheader h4, #pricingheader h4 {
     font-size: 18px;
-    font-family: 'Whitney A', 'Whitney B';
+    font-family: AvenirLTStd-Roman;
     font-weight: 300;
     color: white;
     padding-top: 14px;
@@ -2864,7 +2839,7 @@ h2.description.image-1 {
 
 /* Footer Wrap */
 #f {
-  font-family: 'Whitney A', 'Whitney B';
+  font-family: AvenirLTStd-Roman;
   font-size: 12px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -2880,12 +2855,12 @@ h2.description.image-1 {
 
 .w h2, p {
     text-align: center;
-    font-family: 'Whitney A', 'Whitney B';
+    font-family: AvenirLTStd-Roman;
 }
 
 .w h2 {
     text-align: center;
-    font-family: 'Whitney A', 'Whitney B';
+    font-family: AvenirLTStd-Roman;
     font-weight: 100px;
 }
 
@@ -2935,7 +2910,7 @@ h2.description.image-1 {
 
 .modal-body {
   background: #f2f2f2;
-    font-family: "Lato";
+    font-family: "AvenirLTStd-Roman";
     font-weight: 300;
     font-size: 16px;
     color: #555;

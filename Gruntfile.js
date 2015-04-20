@@ -88,6 +88,7 @@ module.exports = function(grunt) {
 				files: [
 					'public/styles/**/*.css',
 					'public/styles/**/*.less',
+					'public/sass/**/*.scss',
 					'templates/**/*.jade',
 					'node_modules/keystone/templates/**/*.jade'
 				],

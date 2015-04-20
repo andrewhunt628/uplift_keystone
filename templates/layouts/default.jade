@@ -17,9 +17,10 @@ html
         title= title || 'uplift'
 
         link(href="/css/bootstrap.css", rel="stylesheet")
-        link(href="//cloud.typography.com/7134132/722046/css/fonts.css", rel="stylesheet", type="text/css")
+        //- link(href="//cloud.typography.com/7134132/722046/css/fonts.css", rel="stylesheet", type="text/css")
         link(href="/css/font-awesome.min.css", rel="stylesheet")
         link(href="/css/main.css", rel="stylesheet")
+        link(href="/css/screen.css", rel="stylesheet")
         style.
           ul.navbar-right li:hover ul {display: block;}
 
@@ -41,65 +42,108 @@ html
         block head
 
     //- HTML BODY
-    body
-
-        block intro
-
-        +flash-messages(messages)
+    body.animated
 
         block content
 
         // FOOTER
         .footer
           .footer-wrap
-            .footer-nav
-              ul(style='float:left;margin-top: 0;')
-                li 
-                  a(href='/challenge') Challenges
-                li
-                  a(href='/pricing') Pricing
-                li
-                  a(href='/partnerships') Content
-                li
-                  a(href='/team') About
-                li
-                  a(href='/contact') Contact
-              ul
-                li.tw
-                  a(href='javacript:void(0)') Twitter
-            .copy © 2015 Uplift. All rights reserverd.
-            .logo-wrap
-              a.logo(href='/') uplift
+            .row
+              .col-lg-2.col-md-2.col-sm-2.col-xs-12
+                .column.uplift-logo
+                  a.logo(href='/') uplift
+                  .copy-text © 2015 uplift
+              .col-lg12.col-md-1.col-sm-1.col-xs-1.hidden-xs
+              .col-lg-2.col-md-2.col-sm-2.col-xs-4
+                .column
+                  a(href="/challenge").title Product
+                  //- ul
+                    li
+                      a(href='/challenge') Challenges
+                    //- li
+                      a(href='javascript:void(0)') Dinamic Pricing
 
+              .col-lg-2.col-md-2.col-sm-2.col-xs-4
+                .column
+                  a(href="/pricing").title Pricing
+                  //- ul
+                  //-   li
+                  //-     a(href="/pricing") Pricing
+
+              .col-lg-2.col-md-2.col-sm-2.col-xs-4
+                .column
+                  .title Resources
+                  ul
+                    li
+                      a(href='/blog') Blog
+                    li
+                      a(href='/team') About Us
+                    li
+                      a(href='/contact') Contact Us
+              .col-lg12.col-md-1.col-sm-1.col-xs-1.hidden-xs
+
+              .col-lg-2.col-md-2.col-sm-2.col-xs-2.hidden-xs
+
+                .evaluate(data-toggle="modal" data-target="#myModal") Free Evaluation
+
+                .phone-number
+                  i.glyphicon.glyphicon-earphone
+                  span 512 650 0972
+#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        .modal-title Get a Free Evaluation
+        .modal-sub-title Includes detailed analysis of your website's optimization potential
+      .modal-body
+
+        .uplift-form
+          form(method='post')
+
+            .input-group
+
+              input(type='hidden', name='action', value='contact')
+
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding(style="border-bottom: 1px solid #E2E2E2;")
+                .input-home
+                  label Work Email
+                  input(type='email', name='email', value=).form-control
+            
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding
+                .button-home
+                  button(type='submit', data-dismiss='modal').submit.btn Send
+
+#myModalNew.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        .modal-title Get a Quote
+        .modal-sub-title Includes detailed analysis of your website's optimization potential
+      .modal-body
+
+        .uplift-form
+          form(method='post')
+
+            .input-group
+
+              input(type='hidden', name='action', value='contact')
+
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding(style="border-bottom: 1px solid #E2E2E2;")
+                .input-home
+                  label Work Email
+                  input(type='email', name='email', value=).form-control
+            
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding
+                .button-home
+                  button(type='submit', data-dismiss='modal').submit.btn Send
           // row
         // container
         // Footer
         // MODAL FOR CONTACT
-        // Modal
-        #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-          .modal-dialog
-            .modal-content
-              .modal-header
-                button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-                h4#myModalLabel.modal-title contact us
-              .modal-body
-                .row.centered
-                  p We are available 24/7, so don't hesitate to contact us.
-                  p
-                    | Somestreet Ave, 987
-                    br
-                    | London, UK.
-                    br
-                    | +44 8948-4343
-                    br
-                    | hi@blacktie.co
-                  #mapwrap
-                    iframe(height='300', width='100%', frameborder='0', scrolling='no', marginheight='0', marginwidth='0', src='https://www.google.es/maps?t=m&ie=UTF8&ll=52.752693,22.791016&spn=67.34552,156.972656&z=2&output=embed')
-              .modal-footer
-                button.btn.btn-danger(type='button', data-dismiss='modal') Save & Go
-            // /.modal-content
-          // /.modal-dialog
-        // /.modal
+
         script(src="js/lib/jquery/jquery-1.11.1.js")
         script(src="/js/lib/bootstrap/bootstrap-3.2.0.min.js")
         script(src="/js/scripts.js")

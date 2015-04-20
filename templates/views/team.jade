@@ -1,88 +1,83 @@
 extends ../layouts/default
 
 block content
-    #pricingheader
-      .container
-        .row
-          .col-md-12.centered
-            h2 About Us
-            h4 Our mission is to make optimization fast & affordable
-            br
-    .ourstory
-      .container
-        .row
-          .col-md-12
-           <br><br>
-        .row
-          .col-md-1
-          .col-md-5
-             p.text-left 
-              | It only took one landing page experiment for the "lightbulb" to go off. 
-              | In 2013, while still working at Google, a colleague reported on the results of his most recent A/B test.
-              | After only 2 months of research and testing, he was
-              | able to improve conversion on a key AdWords sign up page by 8%. The revenue impact 
-              | of this one test was <b>over $100M</b> annually. 
-          .col-md-5
-            p.text-left
-              | We decided that there needed to be an easier way for companies
-              | to achieve these same results. Uplift began as a small side project, and after our first client improved
-              | conversion rate by 41%, our team knew we had something good. Since our initial success,
-              | we've grown to become the largest optimization network. Today we work with clients around the globe, from startups to large corporate clients.
-          .col-md-1
-    .ourresults
-      .container
-        .row
-          .col-md-12
-             h2.text-center Results to Date
-        .row.subheader
-            .col-lg-4
-              
-              h1.text-center
-                | <b>+ 28%</b> <br>
-              p
-                | Average Uplift
-            .col-lg-4
-             
-              h1.text-center
-                | <b>$11.2M</b> <br>
-              p
-                | Total Additional Sales
-            .col-lg-4
-              h1.text-center
-                | <b>12x</b> <br>
-              p
-                | Average ROI 
-    .ourteam
-      .container
-        .row
-          .col-md-12
-             h2.text-center Our Team 
-             <br>
-        .row
-          .col-md-4
-             img(src='/images/andy_bw.png', align='middle', height='90', width='90')
-          .col-md-4
-             img(src='/images/mike_bw.png', align='middle', height='90', width='90')
-          .col-md-4
-             img(src='/images/globe.png', align='middle', height='80', width='80')
-        .row
-          .col-md-3
-             p
-              | <b>Andy Hunt</b> <br>
-              | Lead Optimizer <br>
-          .col-md-1
-             p
-              | +
-          .col-md-4
-             p 
-              | <b>Michael Spilkin</b> <br>
-              | E-commerce guru<br>
-          .col-md-1
-             p
-              | +
-          .col-md-3
-             p 
-              | <b>Optimization Network</b> <br>
-              | Global Community <br><br>
 
-       
+  include nav-blue-default.jade
+
+  #teamheader
+    .calign
+      .row.centered
+        .col-lg-12
+          h2.image-1.main-title About Us
+          h4.description.image-1
+            | Our mission is to make optimization fast & affordable
+  .ourstory
+    .container(style="max-width: 1158px; width: auto;")
+      .row
+        .col-md-12
+         <br><br>
+      .row
+        .col-lg-1.col-md-1.col-sm-1.hidden-xs
+        .col-lg-5.col-md-5.col-sm-5.col-xs-12
+           p.text-left 
+            | It only took one landing page experiment for the "lightbulb" to go off. 
+            | In 2013, while still working at Google, a colleague reported on the results of his most recent A/B test.
+            | After only 2 months of research and testing, he was
+            | able to improve conversion on a key AdWords sign up page by 8%. The revenue impact 
+            | of this one test was <b>over $100M</b> annually. 
+        .col-lg-5.col-md-5.col-sm-5.col-xs-12
+          p.text-left
+            | We decided that there needed to be an easier way for companies
+            | to achieve these same results. Uplift began as a small side project, and after our first client improved
+            | conversion rate by 41%, our team knew we had something good. Today we work with clients around the globe, from startups to large corporate clients.
+        .col-lg-1.col-md-1.col-sm-1.hidden-xs
+  .results-wrap
+      .results
+        .res-wrap
+          .res-offset
+            h2.main-title Our progress to date
+            ul
+              li
+                .value
+                  span + 
+                  |  28%
+                .descr Average Uplift
+              li
+                .value
+                  span $ 
+                  |  11.2 M
+                .descr Total Additional Sales
+              li
+                .value
+                  |  8 X
+                  //- span X 
+                .descr Average ROI
+
+  .ourteam.border-bottom
+    .container(style="max-width: 800px; width: auto;")
+      .row
+        .col-md-12
+           h2.main-title Our Team 
+           br
+           br
+      .row.text-center
+        .col-lg-4.col-md-4.col-sm-4.col-xs-12
+          .member
+            img(src='/images/andy_bw.png', align='middle', height='90', width='90')
+            .info
+              .name Andy Hunt
+              .position Lead Optimizer
+        
+        .col-lg-4.col-md-4.col-sm-4.col-xs-12
+          .member
+            img(src='/images/mike_bw.png', align='middle', height='90', width='90')
+            .info
+              .name Michael Spilkin
+              .position E-commerce gur
+        
+        .col-lg-4.col-md-4.col-sm-4.col-xs-12
+          .member
+            img(src='/images/globe.png', align='middle', height='90', width='90')
+            .info
+              .name Optimization Network
+              .position Global Community

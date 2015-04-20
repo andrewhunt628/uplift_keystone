@@ -1,66 +1,30 @@
 extends ../layouts/default
 
 mixin post(post)
-	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-		h2: a(href='/blog/post/' + post.slug)= post.title
-		p.lead.text-muted.text-left 
-			if post.publishedDate
-				| on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+	li.blog-post
+		.date 
+			.label #{post._.publishedDate.format('MMMM Do, YYYY')} 
+			div(style="clear:both")
+		a.title(href='/blog/post/' + post.slug)= post.title 
+		a(href='javascript:void(0)')
+			img.main-image(src=post._.image.fit())
+		.info
+			| By 
+			a(href='javascript:void(0)') #{post.author.name.first} #{post.author.name.last}
 			if post.categories && post.categories.length
-				| in 
+				|	in 
 				each cat, i in post.categories
 					a(href='/blog/' + cat.key)= cat.name
 					if i < post.categories.length - 1
 						| , 
 					else
-						|  
-			if post.author
-				| by #{post.author.name.first}
-		if post.image.exists
-			img(src=post._.image.fit(160,160)).img.pull-right
-		p!= post.content.brief
-		if post.content.extended
-			p.read-more.text-left: a(href='/blog/post/' + post.slug) Read more...
-
-block intro
-	.container
-		
+						| 
+		.intro!= post.content.brief
+		a.moar(href='/blog/post/' + post.slug) continue reading
 
 block content
 
-	.upper
-		.header
-
-			a.logo(href='javascript:void(0)')
-				img(src='images/logo.png', alt='uplift', title='uplift')
-			.right
-				nav.upper-nav
-					ul
-						li
-							a(href='javascript:void(0)') Challenges
-						li
-							a(href='javascript:void(0)') Pricing
-						li.dropdown
-							a(href='javascript:void(0)') Resources
-							ul
-								li
-									a(href='javascript:void(0)') Submenu
-								li
-									a(href='javascript:void(0)') Submenu Submenu
-								li
-									a(href='javascript:void(0)') Submenu Submenu Submenu
-						li.dropdown
-							a(href='javascript:void(0)') More
-							ul
-								li
-									a(href='javascript:void(0)') Submenu
-								li
-									a(href='javascript:void(0)') Submenu Submenu
-								li
-									a(href='javascript:void(0)') Submenu Submenu Submenu
-
-				a.evaluate(href='javascript:void(0)') Free evaluation
-
+	include nav-blue-default.jade
 
 	.blog-wrap
 		.blog
@@ -71,19 +35,12 @@ block content
 							.wrap
 								block left
 									ul.blog-posts
-										each value in Array(3)
-											li.blog-post
-												a.title(href='javascript:void(0)') Nusce eget justo a ex tincidunt condimentum ac sit amet tellus. 
-												a(href='javascript:void(0)')
-													img.main-image(src='images/mark.png', alt='title')
-												.info
-													| By 
-													a(href='javascript:void(0)') Andy Hunt
-													|  in 
-													a(href='javascript:void(0)') Mobil
-													|  on January 24th
-												.intro Nusce eget justo a ex tincidunt condimentum ac sit amet tellus. Crashtion bibendum aliquet dui vitae bibendum. Vivamus tincidunt vel elit sit amet varius. Phasellus non metus convallis diam rutrum iaculis. Nullam dictum convallis massa, eget eleifend massa tempus at. Fusce rhoncus rhoncus bibendum. Nam dolor mauris, tincidunt mattis quam ut, blandit blandit 
-												a.moar(href='javascript:void(0)') continue reading
+										if filters.category && !data.category
+											h3.text-muted Invalid Category.
+										else
+											if data.posts.results.length
+												each post in data.posts.results
+													+post(post)
 
 							.pagination
 								a.pg-button(href='javascript:void(0)')
@@ -98,21 +55,17 @@ block content
 								block right
 									.join
 										h2.title Join our Community
-										.info Become a CRO expert! Sing up for e-mail updates, industry research, and more good ol' geekery.
+										.info Become a CRO expert! Sign up for e-mail updates, industry research, and more good ol' geekery.
+											//- Mailchimp
+											include mailchimp.jade
 									.explore
 										.title Explore Content
+	
+										if data.categories.length
 										ul.categories
-											li.active
-												a(href='') All categories
-											li
-												a(href='') E-Commerce
-											li
-												a(href='') Mobil
-											li
-												a(href='') Praesent 
-											li
-												a(href='') Bibendum 
-											li
-												a(href='') Magna
-											li
-												a(href='') Mauris
+											li(class=!data.category ? 'active' : false)
+												a(href='/blog') All categories
+											each cat in data.categories
+												li(class=data.category && data.category.id == cat.id ? 'active' : false)
+													a(href='/blog/' + cat.key)= cat.name
+										
