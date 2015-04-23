@@ -10,15 +10,14 @@ $(document).ready(function() {
   });
 
 
-  /* Accepts Enquiry from the enquiry modal */
+  /* Accepts a new Enquiry from the enquiry modal */
   $('button#enquiry-form').click(function(){
-    console.log('submitting form');
     $.ajax({
       type: 'POST',
-      url: '/enquiry',
-      data: $('form.contact').serialize(),
+      url: '/api/enquiries',
+      data: $('form#enquiry-form').serialize(),
       success: function(msg) {
-        alert('Thanks!' + msg);
+        console.log(msg);
       },
       error: function() {
         alert('Sorry, something went wrong while trying to send the enquiry');
