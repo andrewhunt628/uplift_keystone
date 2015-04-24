@@ -8,4 +8,23 @@ $(document).ready(function() {
     event.preventDefault();
     location.href=$(this).data('href');
   });
+
+
+  /* Accepts a new Enquiry from the enquiry modal */
+  $('button#enquiry-form').click(function(){
+    $.ajax({
+      type: 'POST',
+      url: '/api/enquiries',
+      data: $('form#enquiry-form').serialize(),
+      success: function(msg) {
+        console.log(msg);
+      },
+      error: function() {
+        alert('Sorry, something went wrong while trying to send the enquiry');
+      }
+    });
+
+  });
+
+
 });
