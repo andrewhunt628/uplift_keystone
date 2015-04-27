@@ -10,18 +10,18 @@ var keystone = require('keystone');
 // and documentation.
 
 keystone.init({
-	
+
 	'name': 'uplift',
 	'brand': 'uplift',
-	
+
 	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jade',
-	
+
 	'emails': 'templates/emails',
-	
+
 	'auto update': true,
 	'session': true,
 	'auth': true,
@@ -94,9 +94,6 @@ keystone.set('nav', {
 	'enquiries': 'enquiries',
 	'users': 'users'
 });
-
-// keystone.set('mandrill api key', 'pejcGmJUlC4IHtQI9089vw');
-// keystone.set('mandrill username', 'sanchez.marcos.germ@gmail.com');
 
 // Start Keystone to connect to your database and initialise the web server
 
