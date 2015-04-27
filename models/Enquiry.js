@@ -14,6 +14,7 @@ var Enquiry = new keystone.List('Enquiry', {
 Enquiry.add({
 	name: { type: Types.Name, required: true },
 	email: { type: Types.Email, required: true },
+	url: {type: Types.Url},
 	phone: { type: String },
 	enquiryType: { type: Types.Select, options: [
 		{ value: 'message', label: "Just leaving a message" },
@@ -45,9 +46,9 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 	var enquiry = this;
 
 	keystone.list('User').model.find().where('isAdmin', true).exec(function(err, admins) {
-		console.log(admins);
-		console.log(enquiry);
-		if (err) return callback(err);
+		if (err) {
+			return callback(err);
+		}
 
 		new keystone.Email('enquiry-notification').send({
 			to: admins,

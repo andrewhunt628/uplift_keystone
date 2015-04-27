@@ -18,9 +18,11 @@ $(document).ready(function() {
       data: $('form#enquiry-form').serialize(),
       success: function(msg) {
         console.log(msg);
+        window.location.reload(true);
       },
-      error: function() {
-        alert('Sorry, something went wrong while trying to send the enquiry');
+      error: function(err) {
+        console.log(err);
+        window.location.reload(true);
       }
     });
 

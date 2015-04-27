@@ -1,9 +1,7 @@
-var keystone = require('keystone'),
-	async = require('async');
-	Enquiry = keystone.list('Enquiry');
+var keystone = require('keystone')
+var	_ = require('underscore');
 
-
-exports = module.exports = function(req, res) {
+exports = module.exports = function(req, res, next) {
 
 	var email = req.body.email;
 	var Enquiry = keystone.list('Enquiry');
@@ -14,11 +12,17 @@ exports = module.exports = function(req, res) {
 
 	newEnquiry.save(function(err){
 		if(err){
-			console.log(err);
-			res.json('err');
-		}
-		res.json('success');
-	});
+			_.each(err.errors, function(error) {
+				req.flash('error', error.path + ' ' + error.type);
+			});
 
+			next(err);
+		}
+		else {
+			console.log('success');
+			req.flash('success', 'Thank you!  Your enquiry has been sent.');
+			next();
+		}
+	});
 
 };
