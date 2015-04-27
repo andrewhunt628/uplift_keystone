@@ -12,10 +12,20 @@ $(document).ready(function() {
 
   /* Accepts a new Enquiry from the enquiry modal */
   $('button#enquiry-form').click(function(){
+    sendEnquiry('enquiry-form');
+  });
+
+
+  $('button#home-enquiry').click(function(){
+    sendEnquiry('home-enquiry');
+  });
+
+
+  function sendEnquiry(formId) {
     $.ajax({
       type: 'POST',
       url: '/api/enquiries',
-      data: $('form#enquiry-form').serialize(),
+      data: $('form#' + formId).serialize(),
       success: function(msg) {
         console.log(msg);
         window.location.reload(true);
@@ -25,8 +35,6 @@ $(document).ready(function() {
         window.location.reload(true);
       }
     });
-
-  });
-
+  }
 
 });

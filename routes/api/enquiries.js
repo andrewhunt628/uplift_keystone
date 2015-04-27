@@ -2,7 +2,6 @@ var keystone = require('keystone')
 var	_ = require('underscore');
 
 exports = module.exports = function(req, res, next) {
-
 	var email = req.body.email;
 	var Enquiry = keystone.list('Enquiry');
 
