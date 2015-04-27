@@ -2,23 +2,22 @@ extends ../layouts/default
 
 mixin post(post)
 	li.blog-post
-		.date 
-			.label #{post._.publishedDate.format('MMMM Do, YYYY')} 
+		.date
+			.label #{post._.publishedDate.format('MMMM Do, YYYY')}
 			div(style="clear:both")
-		a.title(href='/blog/post/' + post.slug)= post.title 
+		a.title(href='/blog/post/' + post.slug)= post.title
 		a(href='javascript:void(0)')
 			img.main-image(src=post._.image.fit())
 		.info
-			| By 
+			| By
 			a(href='javascript:void(0)') #{post.author.name.first} #{post.author.name.last}
 			if post.categories && post.categories.length
-				|	in 
+				|	in
 				each cat, i in post.categories
 					a(href='/blog/' + cat.key)= cat.name
 					if i < post.categories.length - 1
-						| , 
+						| ,
 					else
-						| 
 		.intro!= post.content.brief
 		a.moar(href='/blog/post/' + post.slug) continue reading
 
@@ -55,12 +54,12 @@ block content
 								block right
 									.join
 										h2.title Join our Community
-										.info Become a CRO expert! Sign up for e-mail updates, industry research, and more good ol' geekery.
+										.info Become a CRO expert! Sign up for e-mail updates & conversion tips.
 											//- Mailchimp
 											include mailchimp.jade
 									.explore
 										.title Explore Content
-	
+
 										if data.categories.length
 										ul.categories
 											li(class=!data.category ? 'active' : false)
@@ -68,4 +67,3 @@ block content
 											each cat in data.categories
 												li(class=data.category && data.category.id == cat.id ? 'active' : false)
 													a(href='/blog/' + cat.key)= cat.name
-										
