@@ -12,19 +12,29 @@ $(document).ready(function() {
 
   /* Accepts a new Enquiry from the enquiry modal */
   $('button#enquiry-form').click(function(){
+    sendEnquiry('enquiry-form');
+  });
+
+
+  $('button#home-enquiry').click(function(){
+    sendEnquiry('home-enquiry');
+  });
+
+
+  function sendEnquiry(formId) {
     $.ajax({
       type: 'POST',
       url: '/api/enquiries',
-      data: $('form#enquiry-form').serialize(),
+      data: $('form#' + formId).serialize(),
       success: function(msg) {
         console.log(msg);
+        window.location.reload(true);
       },
-      error: function() {
-        alert('Sorry, something went wrong while trying to send the enquiry');
+      error: function(err) {
+        console.log(err);
+        window.location.reload(true);
       }
     });
-
-  });
-
+  }
 
 });

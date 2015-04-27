@@ -1,3 +1,5 @@
++flash-messages(messages)
+
 block intro
 
   .nav-home
@@ -54,35 +56,19 @@ block intro
             .info
               h1.main-title.head-title Boost conversion rate - guaranteed
               p.main-description Challenge conversion rate experts to improve site performance. Only pay for results.
-          //- .col-lg-6.col-md-6.col-sm-6.col-xs-12
-          //-   .form.uplift-form
-          //-     form(method='post')
-
-          //-       input(type='hidden', name='action', value='contact')
-
-          //-       fieldset.input-group
-          //-         .col-lg-12(style="border-bottom: 1px solid #E2E2E2;")
-          //-           .input-home
-          //-             label(for="user_url", name='url', value=formData.url) Type your URL
-          //-             input.url(type='text' id="user_url")
-          //-         .col-lg-12(style="border-bottom: 1px solid #E2E2E2;")
-          //-           .input-home
-          //-             label(for="user_email") Enter your Email
-          //-             input.email(type='text' id="user_email",name='email', value=formData.email)
-          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                .col-lg-12.col-md-12.col-sm-12.col-xs-12
             .form
-              form(method='POST', action='/')
+              form( id='home-enquiry')
                 fieldset.input-group
                   .col-lg-12
-                      input.url(type='text' id="user_url" placeholder="Type your URL")
-                      input.email(type='mail' id="user_email" placeholder="Enter your Email")
-                      button.submit(type='submit') Get Started
+                      input.url(type='text' id="url", name="url", placeholder="Type your URL")
+                      input.email(type='email' id="email", name="email",value=formData.email, placeholder="Enter your Email")
+                      button.submit(type='submit', id='home-enquiry') Get Started
       //- .graph
         img(src='images/graph.png', alt='uplift')
     .head-background.img-cover(style="background-image: url('images/bg-home.jpg')")
     .color-background
 
-  +flash-messages(messages)
 
 #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
   .modal-dialog
