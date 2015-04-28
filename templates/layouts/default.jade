@@ -87,7 +87,7 @@ html
 
                 .evaluate(data-toggle="modal" data-target="#myModal") Free Evaluation
 
-                
+
 #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
   .modal-dialog
     .modal-content
@@ -98,7 +98,7 @@ html
       .modal-body
 
         .uplift-form
-          form(method='post')
+          form(method='post', id='enquiry-form')
 
             .input-group
 
@@ -111,7 +111,7 @@ html
 
               .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding
                 .button-home
-                  button(type='submit', data-dismiss='modal').submit.btn Send
+                  button(type='submit', data-dismiss='modal', id='enquiry-form').submit.btn Send
 
 #myModalNew.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
   .modal-dialog

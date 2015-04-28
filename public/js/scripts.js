@@ -20,6 +20,9 @@ $(document).ready(function() {
     sendEnquiry('home-enquiry');
   });
 
+  $('button#contact-form').click(function(){
+    sendEnquiry('contact-form');
+  });
 
   function sendEnquiry(formId) {
     $.ajax({
