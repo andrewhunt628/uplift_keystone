@@ -20,7 +20,7 @@ block content
 					h3 Thanks for getting in touch.
 				else
 					.uplift-form
-						form(method='post')
+						form(method='post', id='contact-form')
 
 							.input-group
 
@@ -35,15 +35,15 @@ block content
 									.input-home
 										label Phone
 										input(type='text', name='phone', value=formData.phone).form-control
-							
+
 								.col-lg-12.col-md-12.col-sm-12.col-xs-12(style="border-bottom: 1px solid #E2E2E2;")
 									.input-home(class=validationErrors.message ? 'has-error' : null)
 										label How can we help?
 										textarea(name='message', rows=4).form-control= formData.message
-							
+
 								.col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding
 									.button-home
-										button(type='submit').submit.btn Send Me!
+										button(type='submit', id='contact-form').submit.btn Send Me!
 
 			.col-lg-6.col-md-6.col-sm-6.col-xs-12
 				.right-map
