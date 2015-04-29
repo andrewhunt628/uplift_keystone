@@ -10,7 +10,7 @@ mixin post(post)
 			img.main-image(src=post._.image.fit())
 		.info
 			| By
-			a(href='javascript:void(0)') #{post.author.name.first} #{post.author.name.last}
+			a(href='javascript:void(0)')  #{post.author.name.first} #{post.author.name.last}
 			if post.categories && post.categories.length
 				|	in
 				each cat, i in post.categories
