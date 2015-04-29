@@ -154,7 +154,7 @@
 	text-transform: uppercase;
  	border-radius: 3px;
  	cursor: pointer;
- 	
+
 
 
  	&:hover{
@@ -165,7 +165,7 @@
  	}
 }
 
-// Cursor Pointer 
+// Cursor Pointer
 
 .button, .get{
 	cursor: pointer;
@@ -188,7 +188,7 @@
 			font-family: 'AvenirLTStd-Heavy' !important;
 			font-size: 44px !important;
 			text-align: center !important;
-			text-transform: uppercase;
+	//		text-transform: uppercase;
 			letter-spacing: 2px;
 			line-height: 54px;
 		}
@@ -375,7 +375,7 @@
 	}
 }
 
-// Section Contact 
+// Section Contact
 
 .container-about{
 	margin-bottom: 0px;
@@ -730,7 +730,7 @@
 		}
 
 		.evaluate{
-			color: #215694 !important; 
+			color: #215694 !important;
 			border: 2px solid #215694;
 			padding: 10px 15px 8px 15px !important;
 
@@ -770,7 +770,7 @@
 // Home
 
 	// Navigation
-	
+
 	.upper{
 
 		.header{
@@ -853,7 +853,7 @@
 
 		.footer-nav{
 			margin-top: -5px;
-			
+
 			ul{
 				float: none !important;
 				margin: 0 auto;
@@ -892,7 +892,7 @@
 			.blog-left, .blog-right{
 				width: 100%;
 				float: none;
-				
+
 			}
 		}
 
@@ -962,7 +962,7 @@
 	.pricing{
 
 		.plans .plans-offset .plans-wrap{
-			
+
 			.plan-ex{
 
 				.plan-item{
@@ -991,12 +991,12 @@
 @media (max-width: 442px){
 
 	// Navigation
-	
+
 	.upper .header .upper-nav ul li{
 		margin: 0px 28px;
 
 		a{
-			
+
 			font-size: 10px;
 		}
 	}
@@ -1005,7 +1005,7 @@
 @media (max-width: 375px){
 
 	// Navigation
-	
+
 	.upper .header .upper-nav ul li{
 		margin: 0px 15px;
 	}

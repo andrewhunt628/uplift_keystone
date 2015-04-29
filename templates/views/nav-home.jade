@@ -58,7 +58,7 @@ block intro
               p.main-description Challenge conversion rate experts to improve site performance. Only pay for results.
                 .col-lg-12.col-md-12.col-sm-12.col-xs-12
             .form
-              form( id='home-enquiry')
+              form( id='home-enquiry', action='post', onsubmit="return false")
                 fieldset.input-group
                   .col-lg-12
                       input.url(type='text' id="url", name="url", placeholder="Type your URL")
@@ -83,8 +83,6 @@ block intro
           form(method='post', id='enquiry-form')
 
             .input-group
-
-              input(type='hidden', name='action', value='contact')
 
               .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding(style="border-bottom: 1px solid #E2E2E2;")
                 .input-home

@@ -1,5 +1,25 @@
 'use strict';
 $(document).ready(function() {
+  toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": false,
+    "positionClass": "toast-top-full-width",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+  };
+
+
+
   /*
     LinkHelper - quick function for convert any selector in a link
     just need to have .linkHelper class and data-href attribute.
@@ -12,30 +32,42 @@ $(document).ready(function() {
 
   /* Accepts a new Enquiry from the enquiry modal */
   $('button#enquiry-form').click(function(){
-    sendEnquiry('enquiry-form');
+    var data = $('form#enquiry-form').serialize();
+    sendEnquiry(data);
+  });
+
+  $('button#enquiry-form-2').click(function(){
+    var data = $('form#enquiry-form-2').serialize();
+    sendEnquiry(data);
   });
 
 
   $('button#home-enquiry').click(function(){
-    sendEnquiry('home-enquiry');
+    var data = $('form#home-enquiry').serialize();
+    sendEnquiry(data);
   });
 
   $('button#contact-form').click(function(){
+    var data = $('form#contact-form').serialize();
+    sendEnquiry(data);
     sendEnquiry('contact-form');
   });
 
-  function sendEnquiry(formId) {
+  function sendEnquiry(data) {
     $.ajax({
       type: 'POST',
       url: '/api/enquiries',
-      data: $('form#' + formId).serialize(),
-      success: function(msg) {
-        console.log(msg);
-        window.location.reload(true);
+      data: data,
+      success: function(resp) {
+        if(resp.success) {
+          toastr.success(resp.message);
+        } else {
+          toastr.error(resp.message);
+        }
+
       },
       error: function(err) {
-        console.log(err);
-        window.location.reload(true);
+        toastr.error(err);
       }
     });
   }
