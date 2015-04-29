@@ -1,3 +1,7 @@
+div.intro > p {
+	text-align: left;
+}
+
 /* line 3, ../sass/screen.scss */
 .nav-home {
   position: relative;
@@ -170,6 +174,7 @@
   text-align: center !important;
   letter-spacing: 2px;
   line-height: 54px;
+  text-transform: uppercase;
 }
 /* line 196, ../sass/screen.scss */
 .hero .info .main-description {

@@ -2,23 +2,23 @@ extends ../layouts/default
 
 mixin post(post)
 	li.blog-post
-		a.title(href='/blog/post/' + post.slug)= post.title 
+		a.title(href='/blog/post/' + post.slug)= post.title
 		a(href='javascript:void(0)')
 			img.main-image(src=post._.image.fit())
 		.info
-			| By 
+			| By<span> </span>
 			a(href='javascript:void(0)') #{post.author.name.first} #{post.author.name.last}
 			if post.categories && post.categories.length
-				|	in 
+				|	in
 				each cat, i in post.categories
 					a(href='/blog/' + cat.key)= cat.name
 					if i < post.categories.length - 1
-						| , 
+						| ,
 					else
-						| 
-			|	on #{post._.publishedDate.format('MMMM Do, YYYY')} 
-		.intro!= post.content.brief
-			
+						|<span> </span>
+			|	on #{post._.publishedDate.format('MMMM Do, YYYY')}
+		.intro!= post.content.extended
+
 		script(type="text/javascript") var disqus_shortname = 'upliftroi'; (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();
 		noscript
 			| Please enable JavaScript to view the
