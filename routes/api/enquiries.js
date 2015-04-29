@@ -1,5 +1,4 @@
 var keystone = require('keystone')
-var	_ = require('underscore');
 
 exports = module.exports = function(req, res, next) {
 	var email = req.body.email;
@@ -10,17 +9,19 @@ exports = module.exports = function(req, res, next) {
 	});
 
 	newEnquiry.save(function(err){
-		if(err){
-			_.each(err.errors, function(error) {
-				req.flash('error', error.path + ' ' + error.type);
-			});
+		var jsonResp = {
+			success: false,
+			message: ''
+		};
 
-			next(err);
+		if(err){
+			jsonResp.message = 'Please fill out the form correctly';
+			res.json(jsonResp);
 		}
 		else {
-			console.log('success');
-			req.flash('success', 'Thank you!  Your enquiry has been sent.');
-			next();
+			jsonResp.success = true;
+			jsonResp.message = 'Thank you for contacting us.';
+			res.json(jsonResp);
 		}
 	});
 

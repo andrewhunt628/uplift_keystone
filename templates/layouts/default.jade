@@ -21,6 +21,8 @@ html
         link(href="/css/font-awesome.min.css", rel="stylesheet")
         link(href="/css/main.css", rel="stylesheet")
         link(href="/css/screen.css", rel="stylesheet")
+        link(href="/css/toastr.css", rel="stylesheet")
+
         style.
           ul.navbar-right li:hover ul {display: block;}
 
@@ -98,7 +100,7 @@ html
       .modal-body
 
         .uplift-form
-          form(method='post', id='enquiry-form')
+          form(method='post', id='enquiry-form-2')
 
             .input-group
 
@@ -111,7 +113,7 @@ html
 
               .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding
                 .button-home
-                  button(type='submit', data-dismiss='modal', id='enquiry-form').submit.btn Send
+                  button(type='submit', data-dismiss='modal', id='enquiry-form-2').submit.btn Send
 
 #myModalNew.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
   .modal-dialog
@@ -126,9 +128,6 @@ html
           form(method='post')
 
             .input-group
-
-              input(type='hidden', name='action', value='contact')
-
               .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding(style="border-bottom: 1px solid #E2E2E2;")
                 .input-home
                   label Work Email
@@ -144,4 +143,6 @@ html
 
         script(src="js/lib/jquery/jquery-1.11.1.js")
         script(src="/js/lib/bootstrap/bootstrap-3.2.0.min.js")
+        script(src="/js/lib/toastr.js")
+
         script(src="/js/scripts.js")
