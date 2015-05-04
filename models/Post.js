@@ -8,6 +8,7 @@ var keystone = require('keystone'),
 
 var Post = new keystone.List('Post', {
 	map: { name: 'title' },
+	track: { updatedAt: true},
 	autokey: { path: 'slug', from: 'title', unique: true }
 });
 
