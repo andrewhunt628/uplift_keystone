@@ -1,5 +1,14 @@
 extends ../layouts/default
 
+block unique-seo-meta
+	link(rel="canonical", href="http://upliftroi.com/blog/" )
+	meta(property="og:locale", content="en_US" )
+	meta(property="og:type", content="article" )
+	meta(property="og:title", content="Conversion Rate Optimization Blog | UpliftROI" )
+	meta(property="og:url", content="http://upliftroi.com/blog/" )
+	meta(property="og:site_name", content="Uplift" )
+	meta(property="og:image", content="http://upliftroi.com/wp-content/uploads/2014/04/blog-header.png" )
+
 mixin post(post)
 	li.blog-post
 		.date
