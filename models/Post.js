@@ -8,6 +8,7 @@ var keystone = require('keystone'),
 
 var Post = new keystone.List('Post', {
 	map: { name: 'title' },
+	track: { updatedAt: true},
 	autokey: { path: 'slug', from: 'title', unique: true }
 });
 
@@ -26,6 +27,10 @@ Post.add({
 
 Post.schema.virtual('content.full').get(function() {
 	return this.content.extended || this.content.brief;
+});
+
+Post.schema.virtual('content.briefAsText').get(function(){
+	return keystone.utils.htmlToText(this.content.brief);
 });
 
 Post.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';

@@ -1,9 +1,22 @@
 extends ../layouts/default
 
+block unique-seo-meta
+  meta( name="description", content="Launch an optimization competition, and let a team of CRO experts compete to improve your website&#039;s performance. Visit our website to get started.")
+  link( rel="canonical", href="http://upliftroi.com/" )
+
+  meta(property="og:locale", content="en_US" )
+  meta(property="og:type", content="website" )
+  meta(property="og:title", content="Professional Conversion Rate Optimization Services | UpliftROI" )
+  meta(property="og:description", content="Launch an optimization competition, and let a team of CRO experts compete to improve your website&#039;s performance. Visit our website to get started." )
+  meta(property="og:url", content="http://upliftroi.com/" )
+  meta(property="og:site_name", content="Uplift" )
+  script( type="application/ld+json")
+    { "@context": "http://schema.org", "@type": "WebSite", "url": "http://upliftroi.com/", "potentialAction": { "@type": "SearchAction", "target": "http://upliftroi.com/?s={search_term}", "query-input": "required name=search_term" } }
+
 block content
-  
+
   include nav-home.jade
-  
+
   .advantages-wrap
     .advantages
       .adv-wrap
@@ -43,17 +56,16 @@ block content
           ul
             li
               .value
-                span + 
+                span +
                 |  28%
               .descr Average Uplift
             li
               .value
-                span $ 
+                span $
                 |  11.2 M
               .descr Total Additional Sales
             li
               .value
                 |  8 X
-                //- span X 
+                //- span X
               .descr Average ROI
-
