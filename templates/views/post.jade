@@ -24,7 +24,7 @@ mixin post(post)
 			| By<span> </span>
 			a(href='javascript:void(0)') #{post.author.name.first} #{post.author.name.last}
 			if post.categories && post.categories.length
-				|	in
+				|	in<span> </span>
 				each cat, i in post.categories
 					a(href='/blog/' + cat.key)= cat.name
 					if i < post.categories.length - 1
