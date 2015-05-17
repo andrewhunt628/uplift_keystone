@@ -74,6 +74,6 @@ block content
 										ul.categories
 											li(class=!data.post.category ? 'active' : false)
 												a(href='/blog') All categories
-											each cat in data.post.categories
+											each cat in data.categories
 												li(class=data.post.category && data.post.category.id == cat.id ? 'active' : false)
 													a(href='/blog/' + cat.key)= cat.name
