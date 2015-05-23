@@ -36,6 +36,13 @@ var routes = {
 // Setup Route Bindings
 exports = module.exports = function(app) {
 
+
+	// 301 redirect from www to site
+	app.all('/*', function(req, res, next) {
+	    if (req.headers.host.match(/^www/) !== null ) res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url, 301);
+	    else next();
+	});
+
 	app.post('/api/enquiries', routes.api.enquiries);
 
 	// Views
@@ -49,6 +56,9 @@ exports = module.exports = function(app) {
 	app.get('/pricing', routes.views.pricing);
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
+
+
+
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
