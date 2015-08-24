@@ -88,31 +88,10 @@ block intro
                 .input-home
                   label Work Email
                   input(type='email', name='email', value=formData.email).form-control
-
-              .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding
-                .button-home
-                  button(type='input', data-dismiss='modal', id='enquiry-form').submit.btn Send
-#myModalNew.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-  .modal-dialog
-    .modal-content
-      .modal-header
-        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-        .modal-title Get a Quote
-        .modal-sub-title Includes detailed analysis of your website's optimization potential
-      .modal-body
-
-        .uplift-form
-          form(method='post', id='contact-form')
-
-            .input-group
-
-              input(type='hidden', name='action', value='contact')
-
               .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding(style="border-bottom: 1px solid #E2E2E2;")
                 .input-home
-                  label Work Email
-                  input(type='email', name='email', value=formData.email).form-control
-
+                  label Phone
+                  input(type='text', name='phone', value=formData.phone).form-control
               .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding
                 .button-home
-                  button(type='submit', data-dismiss='modal', id='contact-form').submit.btn Send
+                  button(type='input', data-dismiss='modal', id='g').submit.btn Send

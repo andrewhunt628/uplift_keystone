@@ -17,12 +17,12 @@ Enquiry.add({
 	url: {type: Types.Url},
 	phone: { type: String },
 	enquiryType: { type: Types.Select, options: [
-		{ value: 'message', label: "Just leaving a message" },
-		{ value: 'question', label: "I've got a question" },
-		{ value: 'other', label: "Something else..." }
+		{ value: 'message', label: 'Just leaving a message' },
+		{ value: 'question', label: 'I\'ve got a question'},
+		{ value: 'other', label: 'Something else...' }
 	] },
 	message: { type: String },
-	createdAt: { type: Date, default: Date.now }
+	createdAt: { type: Date, 'default': Date.now }
 });
 
 Enquiry.schema.pre('save', function(next) {
