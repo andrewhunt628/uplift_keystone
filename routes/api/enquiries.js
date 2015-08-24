@@ -2,10 +2,12 @@ var keystone = require('keystone')
 
 exports = module.exports = function(req, res, next) {
 	var email = req.body.email;
+	var phone = req.body.phone;
 	var Enquiry = keystone.list('Enquiry');
 
 	var newEnquiry = new Enquiry.model({
-		email: email
+		email: email,
+		phone: phone
 	});
 
 	newEnquiry.save(function(err){
