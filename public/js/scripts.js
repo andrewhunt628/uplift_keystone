@@ -29,7 +29,11 @@ $(document).ready(function() {
     location.href=$(this).data('href');
   });
 
+  $(".modal").on('shown', function() {
+          $(this).find("[autofocus]:first").focus();
+      });
 
+      
   /* Accepts a new Enquiry from the enquiry modal */
   $('button#enquiry-form').click(function(){
     var data = $('form#enquiry-form').serialize();

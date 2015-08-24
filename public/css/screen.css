@@ -44,11 +44,6 @@ div.intro > p {
   letter-spacing: 0.5px;
 }
 
-/* line 53, ../sass/screen.scss */
-.upper {
-  background-color: rgba(30, 87, 153, 0.55) !important;
-}
-
 /* line 60, ../sass/screen.scss */
 .upper-blue {
   background-color: #1E5799 !important;
