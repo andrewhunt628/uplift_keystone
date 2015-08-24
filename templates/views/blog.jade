@@ -71,18 +71,19 @@ block content
 									.recent-posts
 										h2.title Recent articles
 										if data.posts.results.length
-											each post in data.posts.results
-												.recent-post
-													a.title(href='/blog/post/' + post.slug)  #{post.title}
-													div.info
-														| by
-														a(href='javascript:void(0)')  #{post.author.name.first} #{post.author.name.last}
-														if post.categories && post.categories.length
-															|	in<span> </span>
-															a(href='/blog/' + post.categories[0].key)= post.categories[0].name
+											each post, index in data.posts.results
+												if index < 5
+													.recent-post
+														a.title(href='/blog/post/' + post.slug)  #{post.title}
+														div.info
+															| by
+															a(href='javascript:void(0)')  #{post.author.name.first} #{post.author.name.last}
+															if post.categories && post.categories.length
+																|	in<span> </span>
+																a(href='/blog/' + post.categories[0].key)= post.categories[0].name
 
-														div.date
-															| #{post._.publishedDate.format('MMMM Do')}
+															div.date
+																| #{post._.publishedDate.format('MMMM Do')}
 
 									.join
 										h2.title Join our Community
