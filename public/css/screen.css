@@ -841,22 +841,23 @@ div.intro > p {
   border-color: #9ea8b5;
   padding-top: 9px;
   padding-left: 18px;
+  padding-bottom: 9px;
 }
-/* line 1038, ../sass/screen.scss */
+/* line 1039, ../sass/screen.scss */
 .recent-posts .recent-post .title {
   color: #1E5799;
   font-weight: bold;
 }
-/* line 1042, ../sass/screen.scss */
+/* line 1043, ../sass/screen.scss */
 .recent-posts .recent-post .info {
   font-size: 11px;
   color: #9ea8b5;
 }
-/* line 1045, ../sass/screen.scss */
+/* line 1046, ../sass/screen.scss */
 .recent-posts .recent-post .info a {
   color: #fe471a;
 }
-/* line 1048, ../sass/screen.scss */
+/* line 1049, ../sass/screen.scss */
 .recent-posts .recent-post .info .date {
   float: right;
   margin-right: 10px;
