@@ -124,7 +124,7 @@ html
               .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding(style="border-bottom: 1px solid #E2E2E2;")
                 .input-home
                   label Work Email
-                  input(type='email', name='email', value=).form-control
+                  input(type='email', name='email',autofocus, value=).form-control
 
               .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding(style="border-bottom: 1px solid #E2E2E2;")
                 .input-home
@@ -135,30 +135,7 @@ html
                 .button-home
                   button(type='submit', data-dismiss='modal', id='enquiry-form-2').submit.btn Send
 
-#myModalNew.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-  .modal-dialog
-    .modal-content
-      .modal-header
-        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-        .modal-title Get a Quote
-        .modal-sub-title Includes detailed analysis of your website's optimization potential
-      .modal-body
 
-        .uplift-form
-          form(method='post')
-
-            .input-group
-              .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding(style="border-bottom: 1px solid #E2E2E2;")
-                .input-home
-                  label Work Email
-                  input(type='email', name='email', value=).form-control
-              .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding(style="border-bottom: 1px solid #E2E2E2;")
-                .input-home
-                  label Phone
-                  input(type='text', name='phone', value=).form-control
-              .col-lg-12.col-md-12.col-sm-12.col-xs-12.col-no-padding
-                .button-home
-                  button(type='submit', data-dismiss='modal').submit.btn Send
           // row
         // container
         // Footer

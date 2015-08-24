@@ -61,7 +61,7 @@ exports = module.exports = function(req, res) {
 	// Load other posts
 	view.on('init', function(next) {
 
-		var q = keystone.list('Post').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit('4');
+		var q = keystone.list('Post').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit('5');
 
 		q.exec(function(err, results) {
 			locals.data.posts = results;
