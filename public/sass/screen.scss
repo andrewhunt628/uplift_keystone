@@ -1022,11 +1022,19 @@ div.intro > p {
 		padding-left: 18px;
 		padding-top: 18px;
 		padding-bottom: 10px;
+
+		border-bottom: 1px;
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+		border-style: solid;
+		border-color: #9ea8b5;
+
 	}
 
 	.recent-post {
-		border-top: 1px;
-		border-bottom: 0;
+		border-bottom: 1px;
+		border-top: 0;
 		border-left: 0;
 		border-right: 0;
 		border-style: solid;
@@ -1052,6 +1060,15 @@ div.intro > p {
 				}
 		}
 
+	}
+
+	.join {
+		border-top: 1px;
+		border-bottom: 0;
+		border-left: 0;
+		border-right: 0;
+		border-style: solid;
+		border-color: #9ea8b5;
 	}
 
 }

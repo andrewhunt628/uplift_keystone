@@ -830,11 +830,17 @@ div.intro > p {
   padding-left: 18px;
   padding-top: 18px;
   padding-bottom: 10px;
+  border-bottom: 1px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  border-color: #9ea8b5;
 }
-/* line 1027, ../sass/screen.scss */
+/* line 1035, ../sass/screen.scss */
 .recent-posts .recent-post {
-  border-top: 1px;
-  border-bottom: 0;
+  border-bottom: 1px;
+  border-top: 0;
   border-left: 0;
   border-right: 0;
   border-style: solid;
@@ -843,22 +849,31 @@ div.intro > p {
   padding-left: 18px;
   padding-bottom: 9px;
 }
-/* line 1039, ../sass/screen.scss */
+/* line 1047, ../sass/screen.scss */
 .recent-posts .recent-post .title {
   color: #1E5799;
   font-weight: bold;
 }
-/* line 1043, ../sass/screen.scss */
+/* line 1051, ../sass/screen.scss */
 .recent-posts .recent-post .info {
   font-size: 11px;
   color: #9ea8b5;
 }
-/* line 1046, ../sass/screen.scss */
+/* line 1054, ../sass/screen.scss */
 .recent-posts .recent-post .info a {
   color: #fe471a;
 }
-/* line 1049, ../sass/screen.scss */
+/* line 1057, ../sass/screen.scss */
 .recent-posts .recent-post .info .date {
   float: right;
   margin-right: 10px;
+}
+/* line 1065, ../sass/screen.scss */
+.recent-posts .join {
+  border-top: 1px;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  border-color: #9ea8b5;
 }
