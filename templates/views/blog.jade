@@ -34,7 +34,10 @@ mixin post(post)
 		.intro!= post.content.brief
 		a.moar(href='/blog/post/' + post.slug) continue reading
 
+
+
 block content
+	- var logoSupplement= " | blog"
 
 	include nav-blue-default.jade
 
