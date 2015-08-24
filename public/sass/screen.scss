@@ -1015,3 +1015,42 @@ div.intro > p {
 		margin: 0px 15px;
 	}
 }
+
+.recent-posts {
+	h2 {
+		font-size: 18px;
+		padding-left: 18px;
+		padding-top: 18px;
+		padding-bottom: 10px;
+	}
+
+	.recent-post {
+		border-top: 1px;
+		border-bottom: 0;
+		border-left: 0;
+		border-right: 0;
+		border-style: solid;
+		border-color: #9ea8b5;
+		
+
+		padding-top: 9px;
+		padding-left: 18px;
+		.title {
+			color: #1E5799;
+			font-weight: bold;
+		}
+		.info {
+			font-size: 11px;
+			color: #9ea8b5;
+				a {
+					color: #fe471a;
+				}
+				.date {
+					float: right;
+					margin-right: 10px
+				}
+		}
+
+	}
+
+}

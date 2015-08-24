@@ -824,3 +824,40 @@ div.intro > p {
     margin: 0px 15px;
   }
 }
+/* line 1020, ../sass/screen.scss */
+.recent-posts h2 {
+  font-size: 18px;
+  padding-left: 18px;
+  padding-top: 18px;
+  padding-bottom: 10px;
+}
+/* line 1027, ../sass/screen.scss */
+.recent-posts .recent-post {
+  border-top: 1px;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  border-color: #9ea8b5;
+  padding-top: 9px;
+  padding-left: 18px;
+}
+/* line 1038, ../sass/screen.scss */
+.recent-posts .recent-post .title {
+  color: #1E5799;
+  font-weight: bold;
+}
+/* line 1042, ../sass/screen.scss */
+.recent-posts .recent-post .info {
+  font-size: 11px;
+  color: #9ea8b5;
+}
+/* line 1045, ../sass/screen.scss */
+.recent-posts .recent-post .info a {
+  color: #fe471a;
+}
+/* line 1048, ../sass/screen.scss */
+.recent-posts .recent-post .info .date {
+  float: right;
+  margin-right: 10px;
+}
